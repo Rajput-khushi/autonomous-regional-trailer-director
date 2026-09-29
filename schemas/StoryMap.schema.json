@@ -1,0 +1,226 @@
+{
+  "$defs": {
+    "Confidence": {
+      "description": "Categorical confidence — AI_SYSTEM_SPEC.md §3, §10.",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "title": "Confidence",
+      "type": "string"
+    },
+    "EmotionalTurn": {
+      "description": "Emotional turn entry in the story map — DATA_SPEC.md §9.",
+      "properties": {
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "emotion": {
+          "title": "Emotion",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scene_id",
+        "emotion"
+      ],
+      "title": "EmotionalTurn",
+      "type": "object"
+    },
+    "MajorEvent": {
+      "description": "Major event record in story_facts.json — DATA_SPEC.md §8.",
+      "properties": {
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "text",
+        "scene_id"
+      ],
+      "title": "MajorEvent",
+      "type": "object"
+    },
+    "SensitiveContentEntry": {
+      "description": "Sensitive content entry in the story map — DATA_SPEC.md §9.",
+      "properties": {
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "flag": {
+          "title": "Flag",
+          "type": "string"
+        },
+        "in": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "In"
+        },
+        "out": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Out"
+        }
+      },
+      "required": [
+        "scene_id",
+        "flag"
+      ],
+      "title": "SensitiveContentEntry",
+      "type": "object"
+    },
+    "StoryCharacter": {
+      "description": "Character record in the generated story map — DATA_SPEC.md §9.",
+      "properties": {
+        "char_id": {
+          "title": "Char Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source": {
+          "default": "editorial",
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "char_id",
+        "name"
+      ],
+      "title": "StoryCharacter",
+      "type": "object"
+    },
+    "StoryRelationship": {
+      "description": "Relationship in the generated story map — DATA_SPEC.md §9.",
+      "properties": {
+        "a": {
+          "title": "A",
+          "type": "string"
+        },
+        "b": {
+          "title": "B",
+          "type": "string"
+        },
+        "relation": {
+          "title": "Relation",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": "public"
+        },
+        "confidence": {
+          "$ref": "#/$defs/Confidence",
+          "default": "HIGH"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "relation"
+      ],
+      "title": "StoryRelationship",
+      "type": "object"
+    },
+    "Visibility": {
+      "description": "Relationship visibility in the story map — DATA_SPEC.md §8.",
+      "enum": [
+        "public",
+        "protected"
+      ],
+      "title": "Visibility",
+      "type": "string"
+    }
+  },
+  "description": "Generated story map output — DATA_SPEC.md §9, SUMMARY.md §11.\nWritten to sample_run/story_map.json.",
+  "properties": {
+    "synthetic": {
+      "default": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "characters": {
+      "items": {
+        "$ref": "#/$defs/StoryCharacter"
+      },
+      "title": "Characters",
+      "type": "array"
+    },
+    "relationships": {
+      "items": {
+        "$ref": "#/$defs/StoryRelationship"
+      },
+      "title": "Relationships",
+      "type": "array"
+    },
+    "major_events": {
+      "items": {
+        "$ref": "#/$defs/MajorEvent"
+      },
+      "title": "Major Events",
+      "type": "array"
+    },
+    "emotional_turns": {
+      "items": {
+        "$ref": "#/$defs/EmotionalTurn"
+      },
+      "title": "Emotional Turns",
+      "type": "array"
+    },
+    "spoilers": {
+      "title": "Spoilers",
+      "type": "object"
+    },
+    "sensitive_content": {
+      "items": {
+        "$ref": "#/$defs/SensitiveContentEntry"
+      },
+      "title": "Sensitive Content",
+      "type": "array"
+    },
+    "disagreements": {
+      "items": {
+        "type": "object"
+      },
+      "title": "Disagreements",
+      "type": "array"
+    }
+  },
+  "title": "StoryMap",
+  "type": "object"
+}

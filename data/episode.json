@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional episode created for prototype evaluation. Not STAGE content. All data is invented.",
+  "episode_id": "ep_synth_001",
+  "series_title": "The Missing Letter [SYNTHETIC]",
+  "episode_title": "Episode 1",
+  "duration": "00:06:00.000",
+  "source_language": "hi",
+  "content_rating": "UA13+",
+  "media_path": null,
+  "evaluation_date": "2026-09-29",
+  "campaign": {
+    "territory": "IN",
+    "start": "2026-10-05",
+    "end": "2026-11-05"
+  },
+  "trailer_duration_window": {
+    "hard_min_s": 20,
+    "hard_max_s": 60,
+    "target_min_s": 30,
+    "target_max_s": 45
+  }
+}

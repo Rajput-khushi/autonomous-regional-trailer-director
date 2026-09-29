@@ -1,0 +1,104 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional structured policies for prototype evaluation. Not real policies. All rules are invented for testing purposes.",
+  "policies": [
+    {
+      "policy_id": "POL-RATING-001",
+      "category": "RATING",
+      "enforcement": "HARD",
+      "description": "Trailer segments must not violate the audience content-rating ceiling. A segment is rejected if it contains a windowed sensitivity flag whose required minimum rating exceeds the audience ceiling.",
+      "rule": {
+        "audience_ceilings": {
+          "family":          "U",
+          "young_adult":     "UA13+",
+          "dialect_region":  "UA13+"
+        },
+        "flag_min_rating": {
+          "VERBAL_CONFLICT_MILD":         "U",
+          "SUGGESTIVE_HUMOUR_MILD":       "UA13+",
+          "PHYSICAL_AGGRESSION_MODERATE": "UA13+",
+          "INTENSE_THREAT":               "UA13+"
+        }
+      },
+      "synthetic": true
+    },
+    {
+      "policy_id": "POL-SPOILER-001",
+      "category": "SPOILER",
+      "enforcement": "HARD",
+      "description": "No trailer segment may include a source interval that overlaps a protected-fact reveal window if the spoiler level exceeds the audience allowed maximum. MAJOR spoilers are never permitted in any trailer.",
+      "rule": {
+        "audience_max_spoiler": {
+          "family":         "LOW",
+          "young_adult":    "LOW",
+          "dialect_region": "LOW"
+        },
+        "override_note": "Historical performance data (CTR, engagement) NEVER overrides spoiler rules."
+      },
+      "synthetic": true
+    },
+    {
+      "policy_id": "POL-STORY-001",
+      "category": "STORY_TRUTH",
+      "enforcement": "HARD",
+      "description": "Marketing claims associated with a segment must not contradict the authoritative story_facts.json. Forbidden claim patterns are specified in story_facts.json. Relationship claims must match documented public relationships.",
+      "rule": {
+        "authoritative_source": "story_facts.json",
+        "forbidden_claim_patterns": ["murder", "ghost", "haunted", "love triangle", "romance", "spouse", "husband", "wife", "married to"],
+        "check_relationships": true,
+        "check_events": true
+      },
+      "synthetic": true
+    },
+    {
+      "policy_id": "POL-DIALECT-001",
+      "category": "DIALECT",
+      "enforcement": "HARD",
+      "description": "Dialect subtitle cues must have native_review != REJECTED. PENDING triggers WARN (human-review flag). PASS is required for APPROVED status. Semantic meaning_tags must match the aligned hi cue. Dialect must not be used as a purely comic device.",
+      "rule": {
+        "allowed_native_review_for_approval": ["APPROVED"],
+        "warn_on": ["PENDING"],
+        "reject_on": ["REJECTED"],
+        "meaning_tags_must_match_hi": true,
+        "stereotype_flags_must_be_empty_or_reviewed": true
+      },
+      "synthetic": true
+    },
+    {
+      "policy_id": "POL-ACCESS-001",
+      "category": "ACCESSIBILITY",
+      "enforcement": "HARD",
+      "description": "Any scene with audio_only_key_info=true must have at least one subtitle cue fully inside every segment window drawn from that scene. Silent segments are exempt.",
+      "rule": {
+        "require_subtitle_for_audio_only_key_info": true,
+        "silent_segment_exempt": true
+      },
+      "synthetic": true
+    },
+    {
+      "policy_id": "POL-DURATION-001",
+      "category": "TIMECODE",
+      "enforcement": "HARD",
+      "description": "Each trailer total duration must fall within the episode-level trailer_duration_window. Segments must not overlap. source_in < source_out for every segment. Segments must lie within their declared scene bounds.",
+      "rule": {
+        "enforce_duration_window": true,
+        "no_segment_overlap": true,
+        "source_in_lt_out": true,
+        "segments_within_scene": true
+      },
+      "synthetic": true
+    },
+    {
+      "policy_id": "POL-BUDGET-001",
+      "category": "BUDGET",
+      "enforcement": "HARD",
+      "description": "Total estimated API cost for the run must not exceed run_budget. If full profile exceeds budget, fallback to lite profile is mandated. If lite profile also exceeds budget, run is rejected.",
+      "rule": {
+        "enforce_run_budget": true,
+        "fallback_profile_on_overrun": "lite",
+        "reject_if_lite_exceeds_budget": true
+      },
+      "synthetic": true
+    }
+  ]
+}

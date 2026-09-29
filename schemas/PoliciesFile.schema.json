@@ -1,0 +1,87 @@
+{
+  "$defs": {
+    "ConstraintCategory": {
+      "description": "Constraint map rule categories — SUMMARY.md §13, PD-13.",
+      "enum": [
+        "RATING",
+        "RIGHTS",
+        "TERRITORY",
+        "ACTOR_PROMOTIONAL_USE",
+        "MUSIC_PROMOTIONAL_USE",
+        "SPOILER",
+        "STORY_TRUTH",
+        "DIALECT",
+        "CULTURAL_RESPECT",
+        "ACCESSIBILITY",
+        "BUDGET",
+        "TIMECODE"
+      ],
+      "title": "ConstraintCategory",
+      "type": "string"
+    },
+    "Policy": {
+      "description": "One structured policy rule — DATA_SPEC.md §12 (PD-12).\nThe `rule` field is a free-form dict whose shape depends on `category`.",
+      "properties": {
+        "policy_id": {
+          "title": "Policy Id",
+          "type": "string"
+        },
+        "category": {
+          "$ref": "#/$defs/ConstraintCategory"
+        },
+        "severity": {
+          "default": "HARD",
+          "title": "Severity",
+          "type": "string"
+        },
+        "text": {
+          "default": "",
+          "title": "Text",
+          "type": "string"
+        },
+        "rule": {
+          "title": "Rule",
+          "type": "object"
+        }
+      },
+      "required": [
+        "policy_id",
+        "category"
+      ],
+      "title": "Policy",
+      "type": "object"
+    }
+  },
+  "description": "Top-level policies.json wrapper — DATA_SPEC.md §12.",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "rating_order": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Rating Order",
+      "type": "array"
+    },
+    "policies": {
+      "items": {
+        "$ref": "#/$defs/Policy"
+      },
+      "title": "Policies",
+      "type": "array"
+    }
+  },
+  "required": [
+    "synthetic",
+    "policies"
+  ],
+  "title": "PoliciesFile",
+  "type": "object"
+}

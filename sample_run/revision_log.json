@@ -1,0 +1,98 @@
+{
+  "revisions": [
+    {
+      "action": "Replaced segment segment_04 (RIGHTS_PROMO_NOT_PERMITTED,STORY_FORBIDDEN_CLAIM,STORY_RELATION_MISMATCH,STORY_RELATION_MISMATCH) with valid footage from scene_01 [00:00:22.000, 00:00:26.000) preserving role stakes_conflict (attempt 1)",
+      "affected": [
+        "family_v1.segment_04"
+      ],
+      "hashes_unchanged": {
+        "segment_01": "6b6dd955d7125b1e",
+        "segment_02": "a119b5fdf49cbbb5",
+        "segment_03": "70e54a292f934553"
+      },
+      "revision": 1,
+      "trigger": "repair:RIGHTS_PROMO_NOT_PERMITTED,STORY_FORBIDDEN_CLAIM,STORY_RELATION_MISMATCH,STORY_RELATION_MISMATCH",
+      "unchanged": [
+        "family_v1.segment_01",
+        "family_v1.segment_02",
+        "family_v1.segment_03"
+      ],
+      "validation": "PASS",
+      "validators_rerun": [
+        "SceneExistenceValidator",
+        "TimecodeValidator",
+        "RightsValidator",
+        "SpoilerValidator",
+        "StoryTruthValidator",
+        "AudienceSafetyValidator",
+        "DialectConsistencyValidator",
+        "AccessibilityValidator",
+        "BudgetValidator"
+      ]
+    },
+    {
+      "action": "Replaced segment segment_03 (STORY_GENRE_MISMATCH) with valid footage from scene_01 [00:00:30.000, 00:00:34.000) preserving role escalation (attempt 1)",
+      "affected": [
+        "young_adult_v1.segment_03"
+      ],
+      "hashes_unchanged": {
+        "segment_01": "7b463c478c9d6e35",
+        "segment_02": "2ab27f80974372d5",
+        "segment_04": "7bcbd8c23f5f7de7",
+        "segment_05": "5b7c9292c7f19378"
+      },
+      "revision": 1,
+      "trigger": "repair:STORY_GENRE_MISMATCH",
+      "unchanged": [
+        "young_adult_v1.segment_01",
+        "young_adult_v1.segment_02",
+        "young_adult_v1.segment_04",
+        "young_adult_v1.segment_05"
+      ],
+      "validation": "PASS",
+      "validators_rerun": [
+        "SceneExistenceValidator",
+        "TimecodeValidator",
+        "RightsValidator",
+        "SpoilerValidator",
+        "StoryTruthValidator",
+        "AudienceSafetyValidator",
+        "DialectConsistencyValidator",
+        "AccessibilityValidator",
+        "BudgetValidator"
+      ]
+    },
+    {
+      "action": "Replaced segment segment_03 (SPOILER_MAJOR) with valid footage from scene_01 [00:00:09.000, 00:00:13.000) preserving role conflict (attempt 1)",
+      "affected": [
+        "dialect_region_v1.segment_03"
+      ],
+      "hashes_unchanged": {
+        "segment_01": "c5373418d7dd176c",
+        "segment_02": "1f19fe727c3f43c9",
+        "segment_04": "a5eddc54db36845a"
+      },
+      "revision": 1,
+      "trigger": "repair:SPOILER_MAJOR",
+      "unchanged": [
+        "dialect_region_v1.segment_01",
+        "dialect_region_v1.segment_02",
+        "dialect_region_v1.segment_04"
+      ],
+      "validation": "PASS",
+      "validators_rerun": [
+        "SceneExistenceValidator",
+        "TimecodeValidator",
+        "RightsValidator",
+        "SpoilerValidator",
+        "StoryTruthValidator",
+        "AudienceSafetyValidator",
+        "DialectConsistencyValidator",
+        "AccessibilityValidator",
+        "BudgetValidator"
+      ]
+    }
+  ],
+  "synthetic": true,
+  "synthetic_notice": "Deterministic revision log tracking segment repairs."
+}

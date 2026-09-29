@@ -1,0 +1,274 @@
+{
+  "audience": "family",
+  "audience_promise": "A family's warmth hides a secret that will change everything.",
+  "cost_profile": "full",
+  "creative_brief": "",
+  "dependency_index": {
+    "family_v1.segment_01": {
+      "audience": "family",
+      "contracts": [
+        "actor_01",
+        "actor_02",
+        "actor_03"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_02"
+      ],
+      "subtitle_cues": [
+        "sub_hi_002_03"
+      ]
+    },
+    "family_v1.segment_02": {
+      "audience": "family",
+      "contracts": [
+        "music_03",
+        "actor_01",
+        "actor_02",
+        "actor_03"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_01"
+      ],
+      "subtitle_cues": [
+        "sub_hi_001_02"
+      ]
+    },
+    "family_v1.segment_03": {
+      "audience": "family",
+      "contracts": [
+        "actor_02",
+        "actor_04"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_03"
+      ],
+      "subtitle_cues": [
+        "sub_hi_003_04"
+      ]
+    },
+    "family_v1.segment_04": {
+      "audience": "family",
+      "contracts": [
+        "music_07",
+        "actor_01",
+        "actor_02"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_04"
+      ],
+      "subtitle_cues": [
+        "sub_hi_004_01"
+      ]
+    }
+  },
+  "duration_seconds": 34.0,
+  "emotional_journey": [],
+  "estimated_cost": 0.27,
+  "fallback_plan": null,
+  "revision": 0,
+  "segments": [
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "family",
+        "contracts": [
+          "actor_01",
+          "actor_02",
+          "actor_03"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_02"
+        ],
+        "subtitle_cues": [
+          "sub_hi_002_03"
+        ]
+      },
+      "evidence": [
+        "scene:scene_02",
+        "cue:sub_hi_002_03"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Same as clean baseline — valid segment.",
+      "risk_flags": [],
+      "role": "hook_humour",
+      "segment_id": "segment_01",
+      "source_in": "00:00:50.000",
+      "source_out": "00:01:00.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_002_03"
+        ],
+        "text": "Tau ne dekha tha tum gire the hastte-hastte!",
+        "track": "hi"
+      },
+      "video": "scene_02"
+    },
+    {
+      "audio_mode": "dialogue_and_music",
+      "claims": [],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "family",
+        "contracts": [
+          "music_03",
+          "actor_01",
+          "actor_02",
+          "actor_03"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_01"
+        ],
+        "subtitle_cues": [
+          "sub_hi_001_02"
+        ]
+      },
+      "evidence": [
+        "scene:scene_01",
+        "cue:sub_hi_001_02",
+        "contract:music_03"
+      ],
+      "framing_tags": [],
+      "music_asset_id": "music_03",
+      "reason": "Same as clean baseline — valid segment.",
+      "risk_flags": [],
+      "role": "warmth",
+      "segment_id": "segment_02",
+      "source_in": "00:00:20.000",
+      "source_out": "00:00:30.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_001_02"
+        ],
+        "text": "Bhaiya, ek khat tha koi...",
+        "track": "hi"
+      },
+      "video": "scene_01"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "family",
+        "contracts": [
+          "actor_02",
+          "actor_04"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_03"
+        ],
+        "subtitle_cues": [
+          "sub_hi_003_04"
+        ]
+      },
+      "evidence": [
+        "scene:scene_03",
+        "cue:sub_hi_003_04"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Same as clean baseline — valid segment.",
+      "risk_flags": [],
+      "role": "mystery_hook",
+      "segment_id": "segment_03",
+      "source_in": "00:01:40.000",
+      "source_out": "00:01:50.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_003_04"
+        ],
+        "text": "Chachi, kuch toh chhupa hai is ghar mein.",
+        "track": "hi"
+      },
+      "video": "scene_03"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [],
+      "confidence": "HIGH",
+      "dependency": null,
+      "evidence": [
+        "scene:scene_01",
+        "cue:sub_hi_001_02"
+      ],
+      "framing_tags": [
+        "narrative"
+      ],
+      "music_asset_id": null,
+      "reason": "Deterministic replacement candidate from scene_01 covering cue sub_hi_001_02",
+      "risk_flags": [],
+      "role": "stakes_conflict",
+      "segment_id": "segment_04",
+      "source_in": "00:00:22.000",
+      "source_out": "00:00:26.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_001_02"
+        ],
+        "text": "Bhaiya, ek khat tha koi...",
+        "track": "hi"
+      },
+      "video": "scene_01"
+    }
+  ],
+  "synthetic": true,
+  "synthetic_notice": "Trailer plan generated from synthetic fixture. Not STAGE content.",
+  "tagline": "",
+  "text_cards": [],
+  "trailer_id": "family_v1",
+  "transitions": [],
+  "validation": null,
+  "voice_over": null
+}

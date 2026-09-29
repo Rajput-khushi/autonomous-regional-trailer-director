@@ -1,0 +1,60 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Hand-authored synthetic replay fixture. Represents deterministic baseline output of the plan_audiences node. NOT evidence of live model behaviour.",
+  "recorded_for": {
+    "node": "plan_audiences",
+    "fixture_version": "1.0",
+    "episode_id": "ep_synth_001",
+    "scenario": "baseline",
+    "input_hash": "sha256:synthetic-fixture-v1-stable",
+    "note": "Deterministic replay. Same inputs must produce identical outputs in replay mode."
+  },
+  "response": {
+    "promises": {
+      "family": {
+        "audience_id": "family",
+        "trailer_id": "family_v1",
+        "hook": "A family's warmth hides a secret that will change everything.",
+        "emotional_beat": "warmth → curiosity → stakes",
+        "avoid": ["frightening context", "intense conflict", "spoiler revelations"],
+        "target_duration_s": 38,
+        "allowed_scenes": ["scene_01", "scene_02", "scene_03", "scene_04", "scene_08"],
+        "blocked_scenes_reason": {
+          "scene_05": "MEDIUM spoiler F03 reveal window overlaps tension content; marginal risk",
+          "scene_06": "INTENSE_THREAT flag exceeds U ceiling (family)",
+          "scene_07": "MAJOR spoiler F01 — HARD BLOCK per POL-SPOILER-001"
+        },
+        "confidence": "HIGH"
+      },
+      "young_adult": {
+        "audience_id": "young_adult",
+        "trailer_id": "young_adult_v1",
+        "hook": "When a sealed letter breaks twelve years of silence — whose truth survives?",
+        "emotional_beat": "humour → conflict → tension → escalation → button",
+        "avoid": ["explicit twist reveal", "relationship spoilers", "patronising framing"],
+        "target_duration_s": 41,
+        "allowed_scenes": ["scene_02", "scene_04", "scene_05", "scene_06", "scene_07"],
+        "blocked_scenes_reason": {
+          "scene_07": "Only pre-reveal window safe [00:04:25-00:04:30] — silent clip. F01/F02 windows hard-blocked."
+        },
+        "confidence": "HIGH"
+      },
+      "dialect_region": {
+        "audience_id": "dialect_region",
+        "trailer_id": "dialect_region_v1",
+        "hook": "Ghar ki baat — ek khat, ek raaz, ek parivar.",
+        "emotional_beat": "familiar_voice → mystery → conflict → reflection",
+        "avoid": ["dialect as comedy device", "location-based assumptions", "proxy bias triggers"],
+        "target_duration_s": 38,
+        "allowed_scenes": ["scene_01", "scene_03", "scene_04", "scene_08"],
+        "blocked_scenes_reason": {
+          "scene_06": "INTENSE_THREAT content; night confrontation context inappropriate for tone",
+          "scene_07": "MAJOR spoiler F01 — HARD BLOCK per POL-SPOILER-001. Highest CTR (0.90) does not override."
+        },
+        "proxy_bias_warning": "Historical data shows elevated comedy preference for dialect_region. Planner must not treat location as deterministic content preference. This warning is generated as evidence, not as a planning constraint.",
+        "confidence": "MEDIUM",
+        "native_review_required": true
+      }
+    }
+  }
+}

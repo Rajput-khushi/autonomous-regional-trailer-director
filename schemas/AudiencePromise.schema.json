@@ -1,0 +1,56 @@
+{
+  "$defs": {
+    "Confidence": {
+      "description": "Categorical confidence — AI_SYSTEM_SPEC.md §3, §10.",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "title": "Confidence",
+      "type": "string"
+    }
+  },
+  "description": "Generated audience promise (state field audience.promises[id]) — DATA_SPEC.md §13.",
+  "properties": {
+    "audience_id": {
+      "title": "Audience Id",
+      "type": "string"
+    },
+    "promise": {
+      "title": "Promise",
+      "type": "string"
+    },
+    "required_beats": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Required Beats",
+      "type": "array"
+    },
+    "framing_tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Framing Tags",
+      "type": "array"
+    },
+    "avoid_tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Avoid Tags",
+      "type": "array"
+    },
+    "confidence": {
+      "$ref": "#/$defs/Confidence",
+      "default": "MEDIUM"
+    }
+  },
+  "required": [
+    "audience_id",
+    "promise"
+  ],
+  "title": "AudiencePromise",
+  "type": "object"
+}

@@ -1,0 +1,256 @@
+{
+  "$defs": {
+    "AudioMode": {
+      "description": "Audio mode for a trailer segment — DATA_SPEC.md §14.",
+      "enum": [
+        "dialogue_only",
+        "dialogue_and_music",
+        "music_only",
+        "silent"
+      ],
+      "title": "AudioMode",
+      "type": "string"
+    },
+    "Confidence": {
+      "description": "Categorical confidence — AI_SYSTEM_SPEC.md §3, §10.",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "title": "Confidence",
+      "type": "string"
+    },
+    "SegmentClaim": {
+      "description": "A structured story-truth claim in a segment — DATA_SPEC.md §14.\nUsed by StoryTruthValidator to verify relationship/promise claims.",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "subject": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subject"
+        },
+        "object": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Object"
+        },
+        "relation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relation"
+        },
+        "supported_by": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supported By",
+          "type": "array"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "SegmentClaim",
+      "type": "object"
+    },
+    "SegmentDependency": {
+      "description": "Segment-level dependency index entry — ARCHITECTURE.md §8.\nBuilt by plan_trailers; used by ChangeImpactAnalyzer.",
+      "properties": {
+        "scene": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Scene",
+          "type": "array"
+        },
+        "facts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Facts",
+          "type": "array"
+        },
+        "contracts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Contracts",
+          "type": "array"
+        },
+        "policies": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Policies",
+          "type": "array"
+        },
+        "subtitle_cues": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Subtitle Cues",
+          "type": "array"
+        },
+        "audience": {
+          "default": "",
+          "title": "Audience",
+          "type": "string"
+        }
+      },
+      "title": "SegmentDependency",
+      "type": "object"
+    },
+    "SubtitleRef": {
+      "description": "Subtitle reference inside a trailer segment — DATA_SPEC.md §14.\ntext must equal the joined referenced cue texts.",
+      "properties": {
+        "track": {
+          "title": "Track",
+          "type": "string"
+        },
+        "cue_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Cue Ids",
+          "type": "array"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "track",
+        "cue_ids",
+        "text"
+      ],
+      "title": "SubtitleRef",
+      "type": "object"
+    }
+  },
+  "description": "One segment in a trailer edit decision list — DATA_SPEC.md §14, SUMMARY.md §16.\n\nRequired: segment_id, role, source_in, source_out, video, audio_mode,\n          subtitle, reason, evidence.",
+  "properties": {
+    "segment_id": {
+      "title": "Segment Id",
+      "type": "string"
+    },
+    "role": {
+      "title": "Role",
+      "type": "string"
+    },
+    "source_in": {
+      "title": "Source In",
+      "type": "string"
+    },
+    "source_out": {
+      "title": "Source Out",
+      "type": "string"
+    },
+    "video": {
+      "title": "Video",
+      "type": "string"
+    },
+    "audio_mode": {
+      "$ref": "#/$defs/AudioMode"
+    },
+    "music_asset_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Music Asset Id"
+    },
+    "subtitle": {
+      "$ref": "#/$defs/SubtitleRef"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/SegmentClaim"
+      },
+      "title": "Claims",
+      "type": "array"
+    },
+    "framing_tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Framing Tags",
+      "type": "array"
+    },
+    "risk_flags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Risk Flags",
+      "type": "array"
+    },
+    "confidence": {
+      "$ref": "#/$defs/Confidence",
+      "default": "HIGH"
+    },
+    "dependency": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SegmentDependency"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "segment_id",
+    "role",
+    "source_in",
+    "source_out",
+    "video",
+    "audio_mode",
+    "subtitle",
+    "reason"
+  ],
+  "title": "TrailerSegment",
+  "type": "object"
+}

@@ -1,0 +1,63 @@
+{
+  "description": "Serialized run state written to sample_run/run_state.json.\nUsed for change-impact resume (ARCHITECTURE.md §8.1).\nThe actual TrailerState fields are stored as a flat JSON-serializable dict.",
+  "properties": {
+    "synthetic": {
+      "default": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "run_config": {
+      "title": "Run Config",
+      "type": "object"
+    },
+    "candidate_plan": {
+      "title": "Candidate Plan",
+      "type": "object"
+    },
+    "dependency_index": {
+      "title": "Dependency Index",
+      "type": "object"
+    },
+    "constraint_map": {
+      "title": "Constraint Map",
+      "type": "object"
+    },
+    "validation": {
+      "title": "Validation",
+      "type": "object"
+    },
+    "revisions": {
+      "items": {
+        "type": "object"
+      },
+      "title": "Revisions",
+      "type": "array"
+    },
+    "decision_log": {
+      "items": {
+        "type": "object"
+      },
+      "title": "Decision Log",
+      "type": "array"
+    },
+    "status": {
+      "default": "PASS",
+      "title": "Status",
+      "type": "string"
+    },
+    "estimated_cost": {
+      "default": 0.0,
+      "title": "Estimated Cost",
+      "type": "number"
+    },
+    "segment_hashes": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Segment Hashes",
+      "type": "object"
+    }
+  },
+  "title": "RunState",
+  "type": "object"
+}

@@ -1,0 +1,78 @@
+{
+  "$defs": {
+    "DialogueLine": {
+      "description": "One dialogue line — DATA_SPEC.md §6.\nFields: line_id, scene_id, speaker, in, out, text, gloss_en, synthetic.",
+      "properties": {
+        "line_id": {
+          "title": "Line Id",
+          "type": "string"
+        },
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "speaker": {
+          "title": "Speaker",
+          "type": "string"
+        },
+        "in": {
+          "title": "In",
+          "type": "string"
+        },
+        "out": {
+          "title": "Out",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "gloss_en": {
+          "default": "",
+          "title": "Gloss En",
+          "type": "string"
+        },
+        "synthetic": {
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "line_id",
+        "scene_id",
+        "speaker",
+        "in",
+        "out",
+        "text"
+      ],
+      "title": "DialogueLine",
+      "type": "object"
+    }
+  },
+  "description": "Top-level wrapper — dialogue.json is a bare list, so this wraps it.",
+  "properties": {
+    "synthetic": {
+      "default": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "lines": {
+      "items": {
+        "$ref": "#/$defs/DialogueLine"
+      },
+      "title": "Lines",
+      "type": "array"
+    }
+  },
+  "required": [
+    "lines"
+  ],
+  "title": "DialogueFile",
+  "type": "object"
+}

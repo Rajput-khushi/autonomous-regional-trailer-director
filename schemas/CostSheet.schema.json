@@ -1,0 +1,115 @@
+{
+  "$defs": {
+    "CostProfile": {
+      "description": "One cost profile (full / lite) — DATA_SPEC.md §16.\nValues are call counts; multiply by rates to get cost.",
+      "properties": {
+        "multimodal_scene_analysis": {
+          "default": 0,
+          "title": "Multimodal Scene Analysis",
+          "type": "integer"
+        },
+        "story_analysis_call": {
+          "default": 1,
+          "title": "Story Analysis Call",
+          "type": "integer"
+        },
+        "audience_call": {
+          "default": 1,
+          "title": "Audience Call",
+          "type": "integer"
+        },
+        "planning_call": {
+          "default": 1,
+          "title": "Planning Call",
+          "type": "integer"
+        },
+        "repair_rerank_call": {
+          "default": 0,
+          "title": "Repair Rerank Call",
+          "type": "integer"
+        }
+      },
+      "title": "CostProfile",
+      "type": "object"
+    },
+    "CostRates": {
+      "description": "Per-call cost rates — DATA_SPEC.md §16.",
+      "properties": {
+        "multimodal_scene_analysis": {
+          "default": 0.05,
+          "title": "Multimodal Scene Analysis",
+          "type": "number"
+        },
+        "story_analysis_call": {
+          "default": 0.05,
+          "title": "Story Analysis Call",
+          "type": "number"
+        },
+        "audience_call": {
+          "default": 0.03,
+          "title": "Audience Call",
+          "type": "number"
+        },
+        "planning_call": {
+          "default": 0.05,
+          "title": "Planning Call",
+          "type": "number"
+        },
+        "repair_rerank_call": {
+          "default": 0.02,
+          "title": "Repair Rerank Call",
+          "type": "number"
+        },
+        "mock_call": {
+          "default": 0.0,
+          "title": "Mock Call",
+          "type": "number"
+        }
+      },
+      "title": "CostRates",
+      "type": "object"
+    }
+  },
+  "description": "Cost sheet — DATA_SPEC.md §16.\nprofiles: {\"full\": CostProfile, \"lite\": CostProfile}",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "currency_unit": {
+      "default": "USD_synthetic",
+      "title": "Currency Unit",
+      "type": "string"
+    },
+    "run_budget": {
+      "default": 2.0,
+      "title": "Run Budget",
+      "type": "number"
+    },
+    "rates": {
+      "$ref": "#/$defs/CostRates"
+    },
+    "profiles": {
+      "additionalProperties": {
+        "$ref": "#/$defs/CostProfile"
+      },
+      "title": "Profiles",
+      "type": "object"
+    },
+    "fallback_profile": {
+      "default": "lite",
+      "title": "Fallback Profile",
+      "type": "string"
+    }
+  },
+  "required": [
+    "synthetic"
+  ],
+  "title": "CostSheet",
+  "type": "object"
+}

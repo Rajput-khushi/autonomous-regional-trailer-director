@@ -1,0 +1,124 @@
+{
+  "$defs": {
+    "Confidence": {
+      "description": "Categorical confidence — AI_SYSTEM_SPEC.md §3, §10.",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "title": "Confidence",
+      "type": "string"
+    },
+    "RevealWindow": {
+      "description": "One reveal window for a protected fact — DATA_SPEC.md §8.",
+      "properties": {
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "in": {
+          "title": "In",
+          "type": "string"
+        },
+        "out": {
+          "title": "Out",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scene_id",
+        "in",
+        "out"
+      ],
+      "title": "RevealWindow",
+      "type": "object"
+    },
+    "SpoilerFact": {
+      "description": "One fact in the spoiler map — DATA_SPEC.md §10.\nsource: \"editorial\" | \"llm\"",
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "fact": {
+          "title": "Fact",
+          "type": "string"
+        },
+        "spoiler_level": {
+          "$ref": "#/$defs/SpoilerLevel"
+        },
+        "source": {
+          "default": "editorial",
+          "title": "Source",
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/$defs/Confidence",
+          "default": "HIGH"
+        },
+        "reveal_windows": {
+          "items": {
+            "$ref": "#/$defs/RevealWindow"
+          },
+          "title": "Reveal Windows",
+          "type": "array"
+        },
+        "trigger_terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Trigger Terms",
+          "type": "array"
+        }
+      },
+      "required": [
+        "fact_id",
+        "fact",
+        "spoiler_level"
+      ],
+      "title": "SpoilerFact",
+      "type": "object"
+    },
+    "SpoilerLevel": {
+      "description": "DATA_SPEC.md §10 / SUMMARY.md §12.",
+      "enum": [
+        "NONE",
+        "LOW",
+        "MEDIUM",
+        "MAJOR"
+      ],
+      "title": "SpoilerLevel",
+      "type": "string"
+    }
+  },
+  "description": "Spoiler map output — DATA_SPEC.md §10, §18 (PD-15).\nEmitted separately from story_map.json for independent auditability.",
+  "properties": {
+    "synthetic": {
+      "default": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "facts": {
+      "items": {
+        "$ref": "#/$defs/SpoilerFact"
+      },
+      "title": "Facts",
+      "type": "array"
+    },
+    "llm_added_candidates": {
+      "items": {
+        "$ref": "#/$defs/SpoilerFact"
+      },
+      "title": "Llm Added Candidates",
+      "type": "array"
+    }
+  },
+  "title": "SpoilerMap",
+  "type": "object"
+}

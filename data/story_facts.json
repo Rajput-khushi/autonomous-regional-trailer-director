@@ -1,0 +1,70 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional editorial spoiler/continuity sheet. Not STAGE content. Not legal advice.",
+  "characters": [
+    {"char_id": "char_dharam",  "name": "Dharam",        "actor_id": "actor_01", "role": "elder brother"},
+    {"char_id": "char_sunita",  "name": "Sunita",        "actor_id": "actor_02", "role": "younger sister, protagonist"},
+    {"char_id": "char_randhir", "name": "Randhir (Tau)", "actor_id": "actor_03", "role": "paternal uncle, family patriarch"},
+    {"char_id": "char_chachi",  "name": "Chachi",        "actor_id": "actor_04", "role": "neighbour"}
+  ],
+  "relationships": [
+    {"a": "char_dharam",  "b": "char_sunita",  "relation": "sibling",       "visibility": "public"},
+    {"a": "char_randhir", "b": "char_dharam",  "relation": "uncle_nephew",  "visibility": "public"},
+    {"a": "char_randhir", "b": "char_sunita",  "relation": "uncle_niece",   "visibility": "public"},
+    {"a": "char_chachi",  "b": "char_sunita",  "relation": "neighbour",     "visibility": "public"},
+    {"a": "char_randhir", "b": "char_sunita",  "relation": "biological_father", "visibility": "protected", "fact_id": "F01"}
+  ],
+  "protected_facts": [
+    {
+      "fact_id": "F01",
+      "spoiler_level": "MAJOR",
+      "fact": "The letter reveals Randhir is Sunita's biological father.",
+      "reveal_windows": [
+        {"scene_id": "scene_07", "in": "00:04:50.000", "out": "00:05:10.000"}
+      ],
+      "trigger_terms": ["biological father", "her real father", "asli baap", "asli pita"]
+    },
+    {
+      "fact_id": "F02",
+      "spoiler_level": "MAJOR",
+      "fact": "Dharam hid the letter for twelve years.",
+      "reveal_windows": [
+        {"scene_id": "scene_06", "in": "00:04:05.000", "out": "00:04:20.000"},
+        {"scene_id": "scene_07", "in": "00:04:30.000", "out": "00:04:45.000"}
+      ],
+      "trigger_terms": ["hid the letter", "hidden for twelve years", "baarh saal tak chhupaya"]
+    },
+    {
+      "fact_id": "F03",
+      "spoiler_level": "MEDIUM",
+      "fact": "The letter was hidden inside the old harmonium.",
+      "reveal_windows": [
+        {"scene_id": "scene_05", "in": "00:03:10.000", "out": "00:03:25.000"}
+      ],
+      "trigger_terms": ["inside the harmonium", "harmonium ke andar", "harmonium mein chhupa"]
+    },
+    {
+      "fact_id": "F04",
+      "spoiler_level": "MEDIUM",
+      "fact": "The siblings partially reconcile at the end.",
+      "reveal_windows": [
+        {"scene_id": "scene_08", "in": "00:05:35.000", "out": "00:05:55.000"}
+      ],
+      "trigger_terms": ["they reconcile", "forgive", "maafi", "reconcile"]
+    }
+  ],
+  "permitted_genres": ["family_drama", "mystery"],
+  "forbidden_claim_patterns": [
+    "murder", "killed", "ghost", "haunted",
+    "love triangle", "romance", "revenge thriller",
+    "spouse", "husband", "wife", "married to"
+  ],
+  "major_events": [
+    {"event_id": "E1", "text": "Sunita learns a family letter is missing", "scene_id": "scene_03"},
+    {"event_id": "E2", "text": "Sunita and Dharam argue about the letter",  "scene_id": "scene_04"},
+    {"event_id": "E3", "text": "Envelope found inside the harmonium",       "scene_id": "scene_05"},
+    {"event_id": "E4", "text": "Night confrontation between Dharam and Randhir", "scene_id": "scene_06"},
+    {"event_id": "E5", "text": "Letter is read aloud; F01 revealed",        "scene_id": "scene_07"},
+    {"event_id": "E6", "text": "Aftermath and partial reconciliation",       "scene_id": "scene_08"}
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "description": "One append-only decision log entry — DATA_SPEC.md §20, ARCHITECTURE.md §10.\nseq is assigned monotonically (never wall-clock time for determinism).",
+  "properties": {
+    "seq": {
+      "title": "Seq",
+      "type": "integer"
+    },
+    "type": {
+      "title": "Type",
+      "type": "string"
+    },
+    "node": {
+      "title": "Node",
+      "type": "string"
+    },
+    "trailer_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trailer Id"
+    },
+    "segment_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Segment Id"
+    },
+    "reason": {
+      "default": "",
+      "title": "Reason",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "detail": {
+      "title": "Detail",
+      "type": "object"
+    }
+  },
+  "required": [
+    "seq",
+    "type",
+    "node"
+  ],
+  "title": "DecisionLogEntry",
+  "type": "object"
+}

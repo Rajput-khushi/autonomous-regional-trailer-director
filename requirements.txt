@@ -1,0 +1,17 @@
+# Autonomous Regional Trailer Director — dependencies
+# Authority: IMPLEMENTATION_PLAN.md §3
+# Runtime: python>=3.11, langgraph, pydantic>=2, pyyaml
+# Dev: pytest
+# Optional live Gemini: google-genai (not required; unset GEMINI_API_KEY => replay mode)
+# No other packages; no web framework, no database, no auth.
+
+# ── Core ──────────────────────────────────────────────────────────────────────
+langgraph>=0.2.0
+pydantic>=2.0.0
+pyyaml>=6.0.0
+
+# ── Dev / Testing ─────────────────────────────────────────────────────────────
+pytest>=8.0.0
+
+# ── Optional: live Gemini model (comment out if not needed) ───────────────────
+# google-genai>=1.0.0

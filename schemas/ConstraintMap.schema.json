@@ -1,0 +1,97 @@
+{
+  "$defs": {
+    "ConstraintCategory": {
+      "description": "Constraint map rule categories — SUMMARY.md §13, PD-13.",
+      "enum": [
+        "RATING",
+        "RIGHTS",
+        "TERRITORY",
+        "ACTOR_PROMOTIONAL_USE",
+        "MUSIC_PROMOTIONAL_USE",
+        "SPOILER",
+        "STORY_TRUTH",
+        "DIALECT",
+        "CULTURAL_RESPECT",
+        "ACCESSIBILITY",
+        "BUDGET",
+        "TIMECODE"
+      ],
+      "title": "ConstraintCategory",
+      "type": "string"
+    },
+    "ConstraintRule": {
+      "description": "One rule in the compiled constraint map — ARCHITECTURE.md §4, SUMMARY.md §13.",
+      "properties": {
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "category": {
+          "$ref": "#/$defs/ConstraintCategory"
+        },
+        "severity": {
+          "default": "HARD",
+          "title": "Severity",
+          "type": "string"
+        },
+        "scope": {
+          "title": "Scope",
+          "type": "object"
+        },
+        "rule": {
+          "title": "Rule",
+          "type": "object"
+        },
+        "source_ref": {
+          "default": "",
+          "title": "Source Ref",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule_id",
+        "category"
+      ],
+      "title": "ConstraintRule",
+      "type": "object"
+    }
+  },
+  "description": "Compiled constraint map — ARCHITECTURE.md §4.\nversion increments whenever a change event is applied.",
+  "properties": {
+    "synthetic": {
+      "default": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "version": {
+      "default": 0,
+      "title": "Version",
+      "type": "integer"
+    },
+    "evaluation_date": {
+      "default": "",
+      "title": "Evaluation Date",
+      "type": "string"
+    },
+    "campaign": {
+      "title": "Campaign",
+      "type": "object"
+    },
+    "rating_order": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Rating Order",
+      "type": "array"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/ConstraintRule"
+      },
+      "title": "Rules",
+      "type": "array"
+    }
+  },
+  "title": "ConstraintMap",
+  "type": "object"
+}

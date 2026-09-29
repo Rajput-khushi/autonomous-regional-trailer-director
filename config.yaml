@@ -1,0 +1,64 @@
+# Autonomous Regional Trailer Director — runtime configuration
+# Authority: ARCHITECTURE.md §11, AI_SYSTEM_SPEC.md §6, IMPLEMENTATION_PLAN.md §6
+# All data is synthetic; evaluation_date is fixed for determinism (DATA_SPEC.md §1).
+
+# ── Run mode ──────────────────────────────────────────────────────────────────
+# replay  : default; runs entirely offline; no API keys required.
+# live    : optional; requires GEMINI_API_KEY env var; falls back to replay on failure.
+mode: replay
+
+# Replay scenario used when mode=replay.
+# traps : drafts seeded with a spoiler trap and a music-rights trap (demonstrates repair path).
+# clean : known-good baseline drafts (demonstrates normal validation path).
+scenario: traps
+
+# Strict replay: if true, abort on any replay fixture miss instead of logging and continuing.
+strict_replay: false
+
+# ── Repair loop ───────────────────────────────────────────────────────────────
+# Maximum number of full repair iterations before a segment is marked REJECTED.
+# Per ARCHITECTURE.md §5: hard-coded cap ensures graph termination.
+max_repair_iterations: 2
+
+# ── Determinism ───────────────────────────────────────────────────────────────
+# Fixed evaluation date. Must match DATA_SPEC.md §1 (2026-09-29).
+# Wall-clock time is never embedded in hashed content.
+evaluation_date: "2026-09-29"
+
+# Campaign window for rights validation (DATA_SPEC.md §4, PD-5).
+campaign:
+  territory: "IN"
+  start: "2026-10-05"
+  end: "2026-11-05"
+
+# ── Output ────────────────────────────────────────────────────────────────────
+output_dir: "sample_run"
+
+# ── Model configuration ───────────────────────────────────────────────────────
+# primary_model: used in live mode only; configurable so evaluators can supply
+#                their preferred model without changing code.
+# fallback_model: always mock/replay; used when primary fails or mode=replay.
+model:
+  primary_model: "gemini-2.0-flash"   # used only if mode=live and GEMINI_API_KEY is set
+  fallback_model: "mock"
+  max_schema_retries: 1               # one schema-repair retry before falling back to mock
+
+# ── Budget ────────────────────────────────────────────────────────────────────
+# run_budget: maximum estimated cost (USD_synthetic) for a single run.
+# In replay mode actual_cost=0 but estimated live cost is still computed (ARCHITECTURE.md §9).
+run_budget: 2.00
+
+# ── Validator ordering ────────────────────────────────────────────────────────
+# Informational; actual order is enforced in src/validators/aggregate.py.
+# SceneExistence → Timecode → Rights → Spoiler → StoryTruth →
+# AudienceSafety → DialectConsistency → Accessibility → Budget
+validator_order:
+  - SceneExistenceValidator
+  - TimecodeValidator
+  - RightsValidator
+  - SpoilerValidator
+  - StoryTruthValidator
+  - AudienceSafetyValidator
+  - DialectConsistencyValidator
+  - AccessibilityValidator
+  - BudgetValidator

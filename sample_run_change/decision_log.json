@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "entry_type": "PACKAGE_LOADED",
+      "evidence": [
+        "scene:all"
+      ],
+      "node": "ingest_evidence",
+      "reason": "Loaded and validated 10 fixtures. Indexed 8 scenes.",
+      "rule_ids": [],
+      "seq": 0
+    },
+    {
+      "entry_type": "MODEL_DISAGREEMENT",
+      "evidence": [
+        "char:char_randhir",
+        "char:char_sunita"
+      ],
+      "node": "analyze_story",
+      "reason": "LLM claimed relationship 'uncle_niece' for ('char_randhir', 'char_sunita'), but editorial truth is 'biological_father'. Editorial wins.",
+      "rule_ids": [
+        "POL-STORY-001"
+      ],
+      "seq": 1
+    },
+    {
+      "entry_type": "STORY_ANALYSIS_COMPLETED",
+      "evidence": [
+        "fact:F01",
+        "fact:F02",
+        "fact:F03",
+        "fact:F04"
+      ],
+      "node": "analyze_story",
+      "reason": "Reconciled story map with 4 characters and 4 protected facts.",
+      "rule_ids": [
+        "POL-STORY-001",
+        "POL-SPOILER-001"
+      ],
+      "seq": 2
+    },
+    {
+      "entry_type": "CONSTRAINTS_MAPPED",
+      "evidence": [],
+      "node": "map_constraints",
+      "reason": "Compiled 19 rules into constraint map v1.",
+      "rule_ids": [
+        "RULE-CONTRACT-C-MUS-03",
+        "RULE-CONTRACT-C-MUS-05",
+        "RULE-CONTRACT-C-MUS-07",
+        "RULE-CONTRACT-C-MUS-09",
+        "RULE-CONTRACT-C-ACT-01"
+      ],
+      "seq": 3
+    },
+    {
+      "entry_type": "AUDIENCE_STRATEGY_PLANNED",
+      "evidence": [
+        "audience:family",
+        "audience:young_adult",
+        "audience:dialect_region"
+      ],
+      "node": "plan_audiences",
+      "reason": "Planned strategy and promises for 3 audience segments.",
+      "rule_ids": [
+        "POL-RATING-001"
+      ],
+      "seq": 4
+    },
+    {
+      "entry_type": "PLAN_PROPOSED",
+      "evidence": [
+        "trailer:family_v1"
+      ],
+      "node": "plan_trailers",
+      "reason": "Proposed candidate trailer plan for family_v1 with 4 segments.",
+      "rule_ids": [],
+      "seq": 5
+    },
+    {
+      "entry_type": "PLAN_PROPOSED",
+      "evidence": [
+        "trailer:young_adult_v1"
+      ],
+      "node": "plan_trailers",
+      "reason": "Proposed candidate trailer plan for young_adult_v1 with 5 segments.",
+      "rule_ids": [],
+      "seq": 6
+    },
+    {
+      "entry_type": "PLAN_PROPOSED",
+      "evidence": [
+        "trailer:dialect_region_v1"
+      ],
+      "node": "plan_trailers",
+      "reason": "Proposed candidate trailer plan for dialect_region_v1 with 4 segments.",
+      "rule_ids": [],
+      "seq": 7
+    },
+    {
+      "entry_type": "VALIDATION_RESULT",
+      "evidence": [
+        "status:PASS"
+      ],
+      "node": "validate",
+      "reason": "Validated family_v1 with status PASS",
+      "rule_ids": [],
+      "seq": 8,
+      "trailer_id": "family_v1"
+    },
+    {
+      "entry_type": "VALIDATION_RESULT",
+      "evidence": [
+        "status:PASS_WITH_WARNINGS"
+      ],
+      "node": "validate",
+      "reason": "Validated young_adult_v1 with status PASS_WITH_WARNINGS",
+      "rule_ids": [],
+      "seq": 9,
+      "trailer_id": "young_adult_v1"
+    },
+    {
+      "entry_type": "VALIDATION_RESULT",
+      "evidence": [
+        "status:PASS_WITH_WARNINGS"
+      ],
+      "node": "validate",
+      "reason": "Validated dialect_region_v1 with status PASS_WITH_WARNINGS",
+      "rule_ids": [],
+      "seq": 10,
+      "trailer_id": "dialect_region_v1"
+    },
+    {
+      "entry_type": "RUN_FINALIZED",
+      "evidence": [
+        "status:PASS_WITH_WARNINGS"
+      ],
+      "node": "finalize",
+      "reason": "Workflow run finalized with status PASS_WITH_WARNINGS",
+      "rule_ids": [],
+      "seq": 11
+    }
+  ],
+  "synthetic": true,
+  "synthetic_notice": "Deterministic audit decision log."
+}

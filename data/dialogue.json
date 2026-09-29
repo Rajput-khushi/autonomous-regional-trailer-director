@@ -1,0 +1,50 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional dialogue lines for prototype evaluation. All text is invented placeholder content. Not STAGE content.",
+  "lines": [
+    {"line_id":"line_001_01","scene_id":"scene_01","speaker":"char_dharam", "in":"00:00:09.000","out":"00:00:13.000","text":"[hi placeholder] Aao, chai pi lo, thandi ho rahi hai.","gloss_en":"Come have some tea, it is getting cold.","synthetic":true},
+    {"line_id":"line_001_02","scene_id":"scene_01","speaker":"char_sunita", "in":"00:00:22.000","out":"00:00:26.000","text":"[hi placeholder] Bhaiya, ek khat tha koi...","gloss_en":"Brother, there was some letter...","synthetic":true},
+    {"line_id":"line_001_03","scene_id":"scene_01","speaker":"char_dharam", "in":"00:00:30.000","out":"00:00:34.000","text":"[hi placeholder] Kaunsa khat, Sunita?","gloss_en":"Which letter, Sunita?","synthetic":true},
+    {"line_id":"line_001_04","scene_id":"scene_01","speaker":"char_sunita", "in":"00:00:37.000","out":"00:00:41.000","text":"[hi placeholder] Chhod do abhi, Bhaiya.","gloss_en":"Leave it for now, Brother.","synthetic":true},
+
+    {"line_id":"line_002_01","scene_id":"scene_02","speaker":"char_sunita", "in":"00:00:47.000","out":"00:00:51.000","text":"[hi placeholder] Bhaiya, Tau ke samne tum bahut shareef bante ho!","gloss_en":"Brother, you act so well-behaved in front of Uncle!","synthetic":true},
+    {"line_id":"line_002_02","scene_id":"scene_02","speaker":"char_dharam", "in":"00:00:51.000","out":"00:00:52.000","text":"[hi placeholder] Kya?","gloss_en":"What?","synthetic":true},
+    {"line_id":"line_002_03","scene_id":"scene_02","speaker":"char_sunita", "in":"00:00:52.000","out":"00:00:56.000","text":"[hi placeholder] Tau ne dekha tha tum gire the hastte-hastte!","gloss_en":"Uncle saw you fall over laughing!","synthetic":true},
+    {"line_id":"line_002_04","scene_id":"scene_02","speaker":"char_dharam", "in":"00:01:00.000","out":"00:01:05.000","text":"[hi placeholder] Chhod bhi do, Chachi aa rahi hai.","gloss_en":"Let it go, Chachi is coming.","synthetic":true},
+    {"line_id":"line_002_05","scene_id":"scene_02","speaker":"char_chachi", "in":"00:01:06.000","out":"00:01:09.000","text":"[hi placeholder] Yeh sab chhodo, chai peeyo.","gloss_en":"Forget all this, drink your tea.","synthetic":true},
+
+    {"line_id":"line_003_01","scene_id":"scene_03","speaker":"char_chachi", "in":"00:01:26.000","out":"00:01:30.000","text":"[hi placeholder] Sunita, Tau ne kaha tha ki ghar mein ek khat hai.","gloss_en":"Sunita, Uncle had said there is a letter in the house.","synthetic":true},
+    {"line_id":"line_003_02","scene_id":"scene_03","speaker":"char_sunita", "in":"00:01:31.000","out":"00:01:36.000","text":"[hi placeholder] Kaun sa khat, Chachi?","gloss_en":"Which letter, Chachi?","synthetic":true},
+    {"line_id":"line_003_03","scene_id":"scene_03","speaker":"char_chachi", "in":"00:01:37.000","out":"00:01:41.000","text":"[hi placeholder] Woh khat jo kabhi mila nahi...","gloss_en":"The letter that never arrived...","synthetic":true},
+    {"line_id":"line_003_04","scene_id":"scene_03","speaker":"char_sunita", "in":"00:01:42.000","out":"00:01:47.000","text":"[hi placeholder] Chachi, kuch toh chhupa hai is ghar mein.","gloss_en":"Chachi, something is hidden in this house.","synthetic":true},
+    {"line_id":"line_003_05","scene_id":"scene_03","speaker":"char_chachi", "in":"00:01:52.000","out":"00:01:57.000","text":"[hi placeholder] Beta, kuch baatein khaamoshi mein rehti hain.","gloss_en":"Child, some things remain in silence.","synthetic":true},
+
+    {"line_id":"line_004_01","scene_id":"scene_04","speaker":"char_sunita", "in":"00:02:13.000","out":"00:02:17.000","text":"[hi placeholder] Chitthi kahan hai, Bhaiya?","gloss_en":"Where is the letter, Brother?","synthetic":true},
+    {"line_id":"line_004_02","scene_id":"scene_04","speaker":"char_dharam", "in":"00:02:20.000","out":"00:02:25.000","text":"[hi placeholder] Main nahi jaanta koi chitthi.","gloss_en":"I do not know of any letter.","synthetic":true},
+    {"line_id":"line_004_03","scene_id":"scene_04","speaker":"char_sunita", "in":"00:02:32.000","out":"00:02:37.000","text":"[hi placeholder] Tau ne kaha tha tum jaante ho!","gloss_en":"Uncle said you know about it!","synthetic":true},
+    {"line_id":"line_004_04","scene_id":"scene_04","speaker":"char_dharam", "in":"00:02:40.000","out":"00:02:44.000","text":"[hi placeholder] Tau galat bol rahe hain.","gloss_en":"Uncle is saying it wrong.","synthetic":true},
+    {"line_id":"line_004_05","scene_id":"scene_04","speaker":"char_sunita", "in":"00:02:46.000","out":"00:02:51.000","text":"[hi placeholder] Main sach jaanna chahti hoon, Bhaiya!","gloss_en":"I want to know the truth, Brother!","synthetic":true},
+    {"line_id":"line_004_06","scene_id":"scene_04","speaker":"char_dharam", "in":"00:02:52.000","out":"00:02:55.000","text":"[hi placeholder] Yeh ghar ki baat hai.","gloss_en":"This is a matter of the family.","synthetic":true},
+
+    {"line_id":"line_005_01","scene_id":"scene_05","speaker":"char_sunita", "in":"00:03:01.000","out":"00:03:05.000","text":"[hi placeholder] Harmonium ke andar kya rakh diya kisne?","gloss_en":"What has someone placed inside the harmonium?","synthetic":true},
+    {"line_id":"line_005_02","scene_id":"scene_05","speaker":"char_sunita", "in":"00:03:07.000","out":"00:03:12.000","text":"[hi placeholder] Ek band lifafa! Yahan chhupa tha!","gloss_en":"A sealed envelope! It was hidden here!","synthetic":true},
+    {"line_id":"line_005_03","scene_id":"scene_05","speaker":"char_sunita", "in":"00:03:15.000","out":"00:03:20.000","text":"[hi placeholder] Main zaroor padhungi yeh.","gloss_en":"I will definitely read this.","synthetic":true},
+    {"line_id":"line_005_04","scene_id":"scene_05","speaker":"char_sunita", "in":"00:03:22.000","out":"00:03:27.000","text":"[hi placeholder] Yeh khat kiska hai?","gloss_en":"Whose letter is this?","synthetic":true},
+
+    {"line_id":"line_006_01","scene_id":"scene_06","speaker":"char_dharam", "in":"00:03:38.000","out":"00:03:42.000","text":"[hi placeholder] Aadhee raat ko kyun uthaya mujhe, Tau?","gloss_en":"Why did you wake me at midnight, Uncle?","synthetic":true},
+    {"line_id":"line_006_02","scene_id":"scene_06","speaker":"char_randhir","in":"00:03:55.000","out":"00:03:59.000","text":"[hi placeholder] Woh khat kahan hai, Dharam?","gloss_en":"Where is that letter, Dharam?","synthetic":true},
+    {"line_id":"line_006_03","scene_id":"scene_06","speaker":"char_dharam", "in":"00:04:02.000","out":"00:04:07.000","text":"[hi placeholder] Tau, main...","gloss_en":"Uncle, I...","synthetic":true},
+    {"line_id":"line_006_04","scene_id":"scene_06","speaker":"char_randhir","in":"00:04:10.000","out":"00:04:15.000","text":"[hi placeholder] Baarh saal tak chhupaya! Kyun?","gloss_en":"Hidden for twelve years! Why?","synthetic":true},
+
+    {"line_id":"line_007_01","scene_id":"scene_07","speaker":"char_sunita", "in":"00:04:26.000","out":"00:04:30.000","text":"[hi placeholder] Main padhungi yeh khat.","gloss_en":"I will read this letter.","synthetic":true},
+    {"line_id":"line_007_02","scene_id":"scene_07","speaker":"char_dharam", "in":"00:04:35.000","out":"00:04:39.000","text":"[hi placeholder] Sunita, ruk.","gloss_en":"Sunita, stop.","synthetic":true},
+    {"line_id":"line_007_03","scene_id":"scene_07","speaker":"char_randhir","in":"00:04:42.000","out":"00:04:47.000","text":"[hi placeholder] Dharam, ab nahi ruk sakta.","gloss_en":"Dharam, it cannot be stopped now.","synthetic":true},
+    {"line_id":"line_007_04","scene_id":"scene_07","speaker":"char_randhir","in":"00:04:50.000","out":"00:04:54.000","text":"[hi placeholder] Haan... woh sach tha jo usme likha tha.","gloss_en":"Yes... what was written in it was the truth.","synthetic":true},
+    {"line_id":"line_007_05","scene_id":"scene_07","speaker":"char_sunita", "in":"00:05:00.000","out":"00:05:06.000","text":"[hi placeholder] Tau... tum mere...","gloss_en":"Uncle... you are my...","synthetic":true},
+
+    {"line_id":"line_008_01","scene_id":"scene_08","speaker":"char_dharam", "in":"00:05:15.000","out":"00:05:19.000","text":"[hi placeholder] Sunita...","gloss_en":"Sunita...","synthetic":true},
+    {"line_id":"line_008_02","scene_id":"scene_08","speaker":"char_sunita", "in":"00:05:21.000","out":"00:05:26.000","text":"[hi placeholder] Bhaiya, main maafi maangti hoon.","gloss_en":"Brother, I am sorry.","synthetic":true},
+    {"line_id":"line_008_03","scene_id":"scene_08","speaker":"char_dharam", "in":"00:05:32.000","out":"00:05:37.000","text":"[hi placeholder] Yeh dard dono ne jhela hai.","gloss_en":"We both have borne this pain.","synthetic":true},
+    {"line_id":"line_008_04","scene_id":"scene_08","speaker":"char_chachi", "in":"00:05:45.000","out":"00:05:50.000","text":"[hi placeholder] Tum dono bahut strong ho.","gloss_en":"You two are very strong.","synthetic":true}
+  ]
+}

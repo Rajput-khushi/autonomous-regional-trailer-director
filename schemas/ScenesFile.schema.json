@@ -1,0 +1,138 @@
+{
+  "$defs": {
+    "Scene": {
+      "description": "One scene record — DATA_SPEC.md §5.\nField names: scene_id, in, out, description, visual_facts, characters,\nactors, emotion, music_asset_id, audio_stems, spoiler_level,\nsensitivity_flags, audio_only_key_info, synthetic.",
+      "properties": {
+        "synthetic": {
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "in": {
+          "title": "In",
+          "type": "string"
+        },
+        "out": {
+          "title": "Out",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "visual_facts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Visual Facts",
+          "type": "array"
+        },
+        "characters": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Characters",
+          "type": "array"
+        },
+        "actors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Actors",
+          "type": "array"
+        },
+        "emotion": {
+          "default": "",
+          "title": "Emotion",
+          "type": "string"
+        },
+        "music_asset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Music Asset Id"
+        },
+        "audio_stems": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Audio Stems",
+          "type": "array"
+        },
+        "spoiler_level": {
+          "$ref": "#/$defs/SpoilerLevel",
+          "default": "NONE"
+        },
+        "sensitivity_flags": {
+          "items": {},
+          "title": "Sensitivity Flags",
+          "type": "array"
+        },
+        "audio_only_key_info": {
+          "default": false,
+          "title": "Audio Only Key Info",
+          "type": "boolean"
+        },
+        "injection_scan_flag": {
+          "default": false,
+          "title": "Injection Scan Flag",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "synthetic",
+        "scene_id",
+        "in",
+        "out"
+      ],
+      "title": "Scene",
+      "type": "object"
+    },
+    "SpoilerLevel": {
+      "description": "DATA_SPEC.md §10 / SUMMARY.md §12.",
+      "enum": [
+        "NONE",
+        "LOW",
+        "MEDIUM",
+        "MAJOR"
+      ],
+      "title": "SpoilerLevel",
+      "type": "string"
+    }
+  },
+  "description": "Top-level wrapper for scenes.json.",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "scenes": {
+      "items": {
+        "$ref": "#/$defs/Scene"
+      },
+      "title": "Scenes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "synthetic",
+    "scenes"
+  ],
+  "title": "ScenesFile",
+  "type": "object"
+}

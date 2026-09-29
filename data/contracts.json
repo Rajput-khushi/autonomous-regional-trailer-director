@@ -1,0 +1,102 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional contracts for prototype evaluation. Not real contracts, not legal advice. All terms are invented.",
+  "contracts": [
+    {
+      "contract_id": "C-MUS-03",
+      "asset_type": "music",
+      "asset_id": "music_03",
+      "title": "Ghar Ki Dhun [SYNTHETIC]",
+      "mood_tags": ["warmth", "family", "gentle"],
+      "promotional_use": true,
+      "territories": ["IN"],
+      "valid_from": "2025-01-01",
+      "valid_until": "2027-12-31",
+      "_meta": {"licensor": "Synthetic Music House Alpha", "restrictions": "Standard promotional licence. No modification of lyrics.", "synthetic": true}
+    },
+    {
+      "contract_id": "C-MUS-05",
+      "asset_type": "music",
+      "asset_id": "music_05",
+      "title": "Nayi Subah [SYNTHETIC]",
+      "mood_tags": ["hopeful", "warmth", "gentle"],
+      "promotional_use": true,
+      "territories": ["IN"],
+      "valid_from": "2025-01-01",
+      "valid_until": "2027-12-31",
+      "_meta": {"licensor": "Synthetic Music House Alpha", "restrictions": "Standard promotional licence. Compatible replacement for C-MUS-03.", "synthetic": true}
+    },
+    {
+      "contract_id": "C-MUS-07",
+      "asset_type": "music",
+      "asset_id": "music_07",
+      "title": "Raat Ki Baat [SYNTHETIC]",
+      "mood_tags": ["conflict", "tension", "dramatic"],
+      "promotional_use": false,
+      "territories": ["IN"],
+      "valid_from": "2025-01-01",
+      "valid_until": "2027-12-31",
+      "_meta": {"licensor": "Synthetic Music House Beta", "restrictions": "NON-PROMOTIONAL LICENCE ONLY. Scene use permitted; no trailer, promo or advertisement use. RIGHTS TRAP: must fail Rights validator if selected for promotional use.", "synthetic": true}
+    },
+    {
+      "contract_id": "C-MUS-09",
+      "asset_type": "music",
+      "asset_id": "music_09",
+      "title": "Tension Raga [SYNTHETIC]",
+      "mood_tags": ["tension", "threat", "night"],
+      "promotional_use": true,
+      "territories": ["IN"],
+      "valid_from": "2025-01-01",
+      "valid_until": "2026-12-31",
+      "_meta": {"licensor": "Synthetic Music House Gamma", "restrictions": "Standard promotional licence. Night-scene use permitted.", "synthetic": true}
+    },
+    {
+      "contract_id": "C-ACT-01",
+      "asset_type": "actor",
+      "asset_id": "actor_01",
+      "title": "Synthetic Actor A — Appearance Release",
+      "mood_tags": [],
+      "promotional_use": true,
+      "territories": ["IN"],
+      "valid_from": "2025-06-01",
+      "valid_until": "2027-05-31",
+      "_meta": {"actor_id": "actor_01", "actor_name": "Synthetic Actor A", "restrictions": "Standard appearance release.", "synthetic": true}
+    },
+    {
+      "contract_id": "C-ACT-02",
+      "asset_type": "actor",
+      "asset_id": "actor_02",
+      "title": "Synthetic Actor B — Appearance Release",
+      "mood_tags": [],
+      "promotional_use": true,
+      "territories": ["IN"],
+      "valid_from": "2025-06-01",
+      "valid_until": "2027-05-31",
+      "_meta": {"actor_id": "actor_02", "actor_name": "Synthetic Actor B", "restrictions": "Standard appearance release.", "synthetic": true}
+    },
+    {
+      "contract_id": "C-ACT-03",
+      "asset_type": "actor",
+      "asset_id": "actor_03",
+      "title": "Synthetic Actor C — Appearance Release",
+      "mood_tags": [],
+      "promotional_use": true,
+      "territories": ["IN"],
+      "valid_from": "2025-06-01",
+      "valid_until": "2027-05-31",
+      "_meta": {"actor_id": "actor_03", "actor_name": "Synthetic Actor C", "restrictions": "Standard appearance release.", "synthetic": true}
+    },
+    {
+      "contract_id": "C-ACT-04",
+      "asset_type": "actor",
+      "asset_id": "actor_04",
+      "title": "Synthetic Actor D — Appearance Release",
+      "mood_tags": [],
+      "promotional_use": true,
+      "territories": ["IN"],
+      "valid_from": "2025-06-01",
+      "valid_until": "2027-05-31",
+      "_meta": {"actor_id": "actor_04", "actor_name": "Synthetic Actor D", "restrictions": "Standard appearance release.", "synthetic": true}
+    }
+  ]
+}

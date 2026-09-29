@@ -1,0 +1,53 @@
+{
+  "description": "One human-approval requirement — ARCHITECTURE.md §12.\nblocking=True forces trailer to REJECTED until resolved outside the prototype.",
+  "properties": {
+    "item_id": {
+      "title": "Item Id",
+      "type": "string"
+    },
+    "trailer_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trailer Id"
+    },
+    "segment_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Segment Id"
+    },
+    "reason_code": {
+      "title": "Reason Code",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "blocking": {
+      "default": false,
+      "title": "Blocking",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "item_id",
+    "reason_code",
+    "description"
+  ],
+  "title": "HumanReviewItem",
+  "type": "object"
+}

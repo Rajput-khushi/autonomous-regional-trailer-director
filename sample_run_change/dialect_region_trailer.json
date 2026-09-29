@@ -1,0 +1,342 @@
+{
+  "audience": "dialect_region",
+  "audience_promise": "Ghar ki baat — ek khat, ek raaz, ek parivar.",
+  "cost_profile": "full",
+  "creative_brief": "",
+  "dependency_index": {
+    "dialect_region_v1.segment_01": {
+      "audience": "dialect_region",
+      "contracts": [
+        "actor_01",
+        "actor_02",
+        "actor_03"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_01"
+      ],
+      "subtitle_cues": [
+        "sub_bgc_001_01"
+      ]
+    },
+    "dialect_region_v1.segment_02": {
+      "audience": "dialect_region",
+      "contracts": [
+        "actor_02",
+        "actor_04"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_03"
+      ],
+      "subtitle_cues": [
+        "sub_bgc_003_02"
+      ]
+    },
+    "dialect_region_v1.segment_03": {
+      "audience": "dialect_region",
+      "contracts": [
+        "actor_01",
+        "actor_02"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_04"
+      ],
+      "subtitle_cues": [
+        "sub_bgc_004_03"
+      ]
+    },
+    "dialect_region_v1.segment_04": {
+      "audience": "dialect_region",
+      "contracts": [
+        "music_03",
+        "actor_01",
+        "actor_02"
+      ],
+      "facts": [
+        "F04"
+      ],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_08"
+      ],
+      "subtitle_cues": [
+        "sub_bgc_008_02"
+      ]
+    }
+  },
+  "duration_seconds": 38.0,
+  "emotional_journey": [],
+  "estimated_cost": 0.27,
+  "fallback_plan": null,
+  "revision": 0,
+  "segments": [
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_01"
+          ],
+          "type": "emotion"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "dialect_region",
+        "contracts": [
+          "actor_01",
+          "actor_02",
+          "actor_03"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_01"
+        ],
+        "subtitle_cues": [
+          "sub_bgc_001_01"
+        ]
+      },
+      "evidence": [
+        "scene:scene_01",
+        "cue:sub_bgc_001_01",
+        "audience:dialect_region"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Opening warmth in bgc dialect. Dharam's greeting line — culturally grounded, familiar domestic context. Sub_bgc_001_01 inside [00:00:08-00:00:16].",
+      "risk_flags": [
+        "NATIVE_REVIEW_PENDING"
+      ],
+      "role": "familiar_voice",
+      "segment_id": "segment_01",
+      "source_in": "00:00:08.000",
+      "source_out": "00:00:16.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_bgc_001_01"
+        ],
+        "text": "[bgc placeholder] Aa ja, chai pee le, thandi ho rahi se.",
+        "track": "bgc"
+      },
+      "video": "scene_01"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_03"
+          ],
+          "type": "theme"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "dialect_region",
+        "contracts": [
+          "actor_02",
+          "actor_04"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_03"
+        ],
+        "subtitle_cues": [
+          "sub_bgc_003_02"
+        ]
+      },
+      "evidence": [
+        "scene:scene_03",
+        "cue:sub_bgc_003_02",
+        "policy:POL-ACCESS-001"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Sunita's question about the letter in bgc. Mystery hook culturally grounded. audio_only_key_info=true; bgc cue provides subtitle coverage. Sub_bgc_003_02 inside [01:30-01:40].",
+      "risk_flags": [
+        "NATIVE_REVIEW_PENDING"
+      ],
+      "role": "mystery_hook",
+      "segment_id": "segment_02",
+      "source_in": "00:01:30.000",
+      "source_out": "00:01:40.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_bgc_003_02"
+        ],
+        "text": "[bgc placeholder] Kaun sa khat, Chachi?",
+        "track": "bgc"
+      },
+      "video": "scene_03"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_04"
+          ],
+          "type": "theme"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "dialect_region",
+        "contracts": [
+          "actor_01",
+          "actor_02"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_04"
+        ],
+        "subtitle_cues": [
+          "sub_bgc_004_03"
+        ]
+      },
+      "evidence": [
+        "scene:scene_04",
+        "cue:sub_bgc_004_03"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Sibling conflict in bgc dialect. Accusation scene — relatable domestic conflict. Sub_bgc_004_03 inside [02:30-02:40].",
+      "risk_flags": [
+        "NATIVE_REVIEW_PENDING"
+      ],
+      "role": "conflict",
+      "segment_id": "segment_03",
+      "source_in": "00:02:30.000",
+      "source_out": "00:02:40.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_bgc_004_03"
+        ],
+        "text": "[bgc placeholder] Tau bol rha tha tum jaante ho!",
+        "track": "bgc"
+      },
+      "video": "scene_04"
+    },
+    {
+      "audio_mode": "dialogue_and_music",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_08"
+          ],
+          "type": "theme"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "dialect_region",
+        "contracts": [
+          "music_03",
+          "actor_01",
+          "actor_02"
+        ],
+        "facts": [
+          "F04"
+        ],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_08"
+        ],
+        "subtitle_cues": [
+          "sub_bgc_008_02"
+        ]
+      },
+      "evidence": [
+        "scene:scene_08",
+        "cue:sub_bgc_008_02",
+        "contract:music_03"
+      ],
+      "framing_tags": [],
+      "music_asset_id": "music_03",
+      "reason": "Aftermath reflection with music_03 and bgc subtitle. Reconciliation moment — emotionally resonant close. Sub_bgc_008_02 inside [05:20-05:30]. music_03 valid (before change event).",
+      "risk_flags": [
+        "NATIVE_REVIEW_PENDING"
+      ],
+      "role": "heart",
+      "segment_id": "segment_04",
+      "source_in": "00:05:20.000",
+      "source_out": "00:05:30.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_bgc_008_02"
+        ],
+        "text": "[bgc placeholder] Bhai, main maafi maangti hoon.",
+        "track": "bgc"
+      },
+      "video": "scene_08"
+    }
+  ],
+  "synthetic": true,
+  "synthetic_notice": "Trailer plan generated from synthetic fixture. Not STAGE content.",
+  "tagline": "",
+  "text_cards": [],
+  "trailer_id": "dialect_region_v1",
+  "transitions": [],
+  "validation": null,
+  "voice_over": null
+}

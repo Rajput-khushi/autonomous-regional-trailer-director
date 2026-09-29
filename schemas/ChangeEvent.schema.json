@@ -1,0 +1,74 @@
+{
+  "$defs": {
+    "ChangeEventType": {
+      "description": "Change event types — DATA_SPEC.md §19.",
+      "enum": [
+        "CONTRACT_UPDATE",
+        "POLICY_UPDATE",
+        "AUDIENCE_UPDATE",
+        "EVIDENCE_UPDATE",
+        "COST_UPDATE"
+      ],
+      "title": "ChangeEventType",
+      "type": "string"
+    },
+    "ChangeTarget": {
+      "description": "The target of a change event — DATA_SPEC.md §19.\nkind: \"contract\" | \"policy\" | \"scene\" | \"audience\" | \"cost\"",
+      "properties": {
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id"
+      ],
+      "title": "ChangeTarget",
+      "type": "object"
+    }
+  },
+  "description": "A change event applied during a change-impact run — DATA_SPEC.md §19.\ntype must be one of the ChangeEventType values.",
+  "properties": {
+    "synthetic": {
+      "default": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "event_id": {
+      "title": "Event Id",
+      "type": "string"
+    },
+    "type": {
+      "$ref": "#/$defs/ChangeEventType"
+    },
+    "target": {
+      "$ref": "#/$defs/ChangeTarget"
+    },
+    "patch": {
+      "title": "Patch",
+      "type": "object"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_id",
+    "type",
+    "target"
+  ],
+  "title": "ChangeEvent",
+  "type": "object"
+}

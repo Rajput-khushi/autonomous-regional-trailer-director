@@ -1,0 +1,88 @@
+{
+  "$defs": {
+    "Contract": {
+      "description": "One rights contract — DATA_SPEC.md §11.\nasset_type: \"music\" | \"actor\"",
+      "properties": {
+        "contract_id": {
+          "title": "Contract Id",
+          "type": "string"
+        },
+        "asset_type": {
+          "title": "Asset Type",
+          "type": "string"
+        },
+        "asset_id": {
+          "title": "Asset Id",
+          "type": "string"
+        },
+        "title": {
+          "default": "",
+          "title": "Title",
+          "type": "string"
+        },
+        "mood_tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Mood Tags",
+          "type": "array"
+        },
+        "promotional_use": {
+          "title": "Promotional Use",
+          "type": "boolean"
+        },
+        "territories": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Territories",
+          "type": "array"
+        },
+        "valid_from": {
+          "title": "Valid From",
+          "type": "string"
+        },
+        "valid_until": {
+          "title": "Valid Until",
+          "type": "string"
+        }
+      },
+      "required": [
+        "contract_id",
+        "asset_type",
+        "asset_id",
+        "promotional_use",
+        "territories",
+        "valid_from",
+        "valid_until"
+      ],
+      "title": "Contract",
+      "type": "object"
+    }
+  },
+  "description": "Top-level contracts.json wrapper — DATA_SPEC.md §11.",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "contracts": {
+      "items": {
+        "$ref": "#/$defs/Contract"
+      },
+      "title": "Contracts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "synthetic",
+    "contracts"
+  ],
+  "title": "ContractsFile",
+  "type": "object"
+}

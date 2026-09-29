@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional change event for prototype evaluation. Represents a contract update that expires music_03 promotional rights before the campaign start date.",
+  "event_id": "CE-001",
+  "event_type": "CONTRACT_UPDATE",
+  "target_asset_id": "music_03",
+  "target_contract_id": "C-MUS-03",
+  "event_date": "2026-09-15",
+  "description": "Promotional rights for music_03 (Ghar Ki Dhun [SYNTHETIC]) have expired. The updated contract valid_until is 2026-09-01, which is before the campaign start date 2026-10-05. music_03 is no longer valid for promotional use in the current campaign.",
+  "change": {
+    "field": "valid_until",
+    "old_value": "2027-12-31",
+    "new_value": "2026-09-01"
+  },
+  "affected_segments": [
+    {"trailer_id": "family_v1",         "segment_id": "segment_02", "reason": "Uses music_03 as dialogue_and_music asset"},
+    {"trailer_id": "dialect_region_v1", "segment_id": "segment_04", "reason": "Uses music_03 as dialogue_and_music asset"}
+  ],
+  "unaffected_trailers": ["young_adult_v1"],
+  "suggested_replacement_asset_id": "music_05",
+  "suggested_replacement_contract_id": "C-MUS-05",
+  "change_impact_note": "Only family_v1.segment_02 and dialect_region_v1.segment_04 depend on music_03. young_adult_v1 has no dependency on music_03 and must remain UNCHANGED after the repair. Selective repair must not regenerate the unaffected trailer."
+}

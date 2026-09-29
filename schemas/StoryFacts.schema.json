@@ -1,0 +1,238 @@
+{
+  "$defs": {
+    "CharacterRecord": {
+      "description": "Character entry in story_facts.json — DATA_SPEC.md §8.",
+      "properties": {
+        "char_id": {
+          "title": "Char Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "actor_id": {
+          "title": "Actor Id",
+          "type": "string"
+        },
+        "role": {
+          "default": "",
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "char_id",
+        "name",
+        "actor_id"
+      ],
+      "title": "CharacterRecord",
+      "type": "object"
+    },
+    "MajorEvent": {
+      "description": "Major event record in story_facts.json — DATA_SPEC.md §8.",
+      "properties": {
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "text",
+        "scene_id"
+      ],
+      "title": "MajorEvent",
+      "type": "object"
+    },
+    "ProtectedFact": {
+      "description": "One editorial protected story fact — DATA_SPEC.md §8.\nfact_id: F01–F04.",
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "spoiler_level": {
+          "$ref": "#/$defs/SpoilerLevel"
+        },
+        "fact": {
+          "title": "Fact",
+          "type": "string"
+        },
+        "reveal_windows": {
+          "items": {
+            "$ref": "#/$defs/RevealWindow"
+          },
+          "title": "Reveal Windows",
+          "type": "array"
+        },
+        "trigger_terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Trigger Terms",
+          "type": "array"
+        }
+      },
+      "required": [
+        "fact_id",
+        "spoiler_level",
+        "fact",
+        "reveal_windows"
+      ],
+      "title": "ProtectedFact",
+      "type": "object"
+    },
+    "RelationshipRecord": {
+      "description": "Relationship entry in story_facts.json — DATA_SPEC.md §8.",
+      "properties": {
+        "a": {
+          "title": "A",
+          "type": "string"
+        },
+        "b": {
+          "title": "B",
+          "type": "string"
+        },
+        "relation": {
+          "title": "Relation",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": "public"
+        },
+        "fact_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fact Id"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "relation"
+      ],
+      "title": "RelationshipRecord",
+      "type": "object"
+    },
+    "RevealWindow": {
+      "description": "One reveal window for a protected fact — DATA_SPEC.md §8.",
+      "properties": {
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "in": {
+          "title": "In",
+          "type": "string"
+        },
+        "out": {
+          "title": "Out",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scene_id",
+        "in",
+        "out"
+      ],
+      "title": "RevealWindow",
+      "type": "object"
+    },
+    "SpoilerLevel": {
+      "description": "DATA_SPEC.md §10 / SUMMARY.md §12.",
+      "enum": [
+        "NONE",
+        "LOW",
+        "MEDIUM",
+        "MAJOR"
+      ],
+      "title": "SpoilerLevel",
+      "type": "string"
+    },
+    "Visibility": {
+      "description": "Relationship visibility in the story map — DATA_SPEC.md §8.",
+      "enum": [
+        "public",
+        "protected"
+      ],
+      "title": "Visibility",
+      "type": "string"
+    }
+  },
+  "description": "Editorial spoiler / story-truth sheet — DATA_SPEC.md §8 (PD-2).\nThis file is authoritative; StoryAnalyzer output cannot contradict it.",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "characters": {
+      "items": {
+        "$ref": "#/$defs/CharacterRecord"
+      },
+      "title": "Characters",
+      "type": "array"
+    },
+    "relationships": {
+      "items": {
+        "$ref": "#/$defs/RelationshipRecord"
+      },
+      "title": "Relationships",
+      "type": "array"
+    },
+    "protected_facts": {
+      "items": {
+        "$ref": "#/$defs/ProtectedFact"
+      },
+      "title": "Protected Facts",
+      "type": "array"
+    },
+    "permitted_genres": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Permitted Genres",
+      "type": "array"
+    },
+    "forbidden_claim_patterns": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Forbidden Claim Patterns",
+      "type": "array"
+    },
+    "major_events": {
+      "items": {
+        "$ref": "#/$defs/MajorEvent"
+      },
+      "title": "Major Events",
+      "type": "array"
+    }
+  },
+  "required": [
+    "synthetic"
+  ],
+  "title": "StoryFacts",
+  "type": "object"
+}

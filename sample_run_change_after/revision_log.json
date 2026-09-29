@@ -1,0 +1,66 @@
+{
+  "revisions": [
+    {
+      "action": "Swapped music asset to compatible music_05 on segment_04 (attempt 1)",
+      "affected": [
+        "dialect_region_v1.segment_04"
+      ],
+      "hashes_unchanged": {
+        "segment_01": "c5373418d7dd176c",
+        "segment_02": "1f19fe727c3f43c9",
+        "segment_03": "d340e397ff203479"
+      },
+      "revision": 1,
+      "trigger": "repair:RIGHTS_EXPIRED",
+      "unchanged": [
+        "dialect_region_v1.segment_01",
+        "dialect_region_v1.segment_02",
+        "dialect_region_v1.segment_03"
+      ],
+      "validation": "PASS",
+      "validators_rerun": [
+        "SceneExistenceValidator",
+        "TimecodeValidator",
+        "RightsValidator",
+        "SpoilerValidator",
+        "StoryTruthValidator",
+        "AudienceSafetyValidator",
+        "DialectConsistencyValidator",
+        "AccessibilityValidator",
+        "BudgetValidator"
+      ]
+    },
+    {
+      "action": "Swapped music asset to compatible music_05 on segment_02 (attempt 1)",
+      "affected": [
+        "family_v1.segment_02"
+      ],
+      "hashes_unchanged": {
+        "segment_01": "6b6dd955d7125b1e",
+        "segment_03": "70e54a292f934553",
+        "segment_04": "4c83dd0515bd4d5b"
+      },
+      "revision": 1,
+      "trigger": "repair:RIGHTS_EXPIRED",
+      "unchanged": [
+        "family_v1.segment_01",
+        "family_v1.segment_03",
+        "family_v1.segment_04"
+      ],
+      "validation": "PASS",
+      "validators_rerun": [
+        "SceneExistenceValidator",
+        "TimecodeValidator",
+        "RightsValidator",
+        "SpoilerValidator",
+        "StoryTruthValidator",
+        "AudienceSafetyValidator",
+        "DialectConsistencyValidator",
+        "AccessibilityValidator",
+        "BudgetValidator"
+      ]
+    }
+  ],
+  "synthetic": true,
+  "synthetic_notice": "Deterministic revision log tracking segment repairs."
+}

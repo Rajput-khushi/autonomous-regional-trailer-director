@@ -1,0 +1,33 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional historic performance signals for prototype evaluation. These are illustrative hypotheses from synthetic historical data, NOT real viewer analytics. Do not treat as deterministic audience truth.",
+  "bias_note": "PROXY BIAS RISK: scene_02 comedy content shows elevated engagement for dialect_region audience in this synthetic dataset. This correlation between regional/location attribute and comedy preference is a risk flag. It is a hypothesis, not a causal rule. A planner must not use location as a proxy for content preference. Flagged for analyst review per POL-DIALECT-001.",
+  "metric": "click_through_rate",
+  "metric_note": "Synthetic CTR signals. Range 0.0–1.0. scene_07 has highest CTR for young_adult and dialect_region audiences. The SPOILER constraint must override this historical signal — scene_07 reveals F01 (MAJOR). Historical CTR cannot justify spoiler violations.",
+  "rows": [
+    {"scene_id":"scene_01","audience_id":"family",        "ctr":0.82,"engagement":0.75,"note":"Strong warmth signal"},
+    {"scene_id":"scene_01","audience_id":"young_adult",   "ctr":0.40,"engagement":0.38,"note":"Low pace appeal"},
+    {"scene_id":"scene_01","audience_id":"dialect_region","ctr":0.72,"engagement":0.70,"note":"Familiar setting resonance"},
+    {"scene_id":"scene_02","audience_id":"family",        "ctr":0.74,"engagement":0.68,"note":"Humour broad appeal"},
+    {"scene_id":"scene_02","audience_id":"young_adult",   "ctr":0.85,"engagement":0.80,"note":"High comedy engagement"},
+    {"scene_id":"scene_02","audience_id":"dialect_region","ctr":0.78,"engagement":0.76,"note":"PROXY BIAS RISK: elevated comedy engagement may reflect location proxy, not causal preference"},
+    {"scene_id":"scene_03","audience_id":"family",        "ctr":0.50,"engagement":0.52,"note":"Mystery hook moderate"},
+    {"scene_id":"scene_03","audience_id":"young_adult",   "ctr":0.55,"engagement":0.50,"note":"Curiosity moderate"},
+    {"scene_id":"scene_03","audience_id":"dialect_region","ctr":0.66,"engagement":0.64,"note":"Chachi character resonance"},
+    {"scene_id":"scene_04","audience_id":"family",        "ctr":0.55,"engagement":0.50,"note":"Conflict moderate for family"},
+    {"scene_id":"scene_04","audience_id":"young_adult",   "ctr":0.82,"engagement":0.78,"note":"Strong conflict/identity appeal"},
+    {"scene_id":"scene_04","audience_id":"dialect_region","ctr":0.70,"engagement":0.68,"note":"Sibling conflict relatable"},
+    {"scene_id":"scene_05","audience_id":"family",        "ctr":0.45,"engagement":0.42,"note":"Tension moderate for family"},
+    {"scene_id":"scene_05","audience_id":"young_adult",   "ctr":0.60,"engagement":0.58,"note":"Discovery moment"},
+    {"scene_id":"scene_05","audience_id":"dialect_region","ctr":0.58,"engagement":0.55,"note":"Harmonium cultural symbol"},
+    {"scene_id":"scene_06","audience_id":"family",        "ctr":0.30,"engagement":0.28,"note":"Too intense for family ceiling"},
+    {"scene_id":"scene_06","audience_id":"young_adult",   "ctr":0.79,"engagement":0.75,"note":"Strong escalation appeal"},
+    {"scene_id":"scene_06","audience_id":"dialect_region","ctr":0.60,"engagement":0.58,"note":"Night confrontation moderate"},
+    {"scene_id":"scene_07","audience_id":"family",        "ctr":0.61,"engagement":0.60,"note":"Revelation moderate for family; SPOILER blocks use"},
+    {"scene_id":"scene_07","audience_id":"young_adult",   "ctr":0.88,"engagement":0.85,"note":"HIGHEST young_adult CTR; SPOILER F01 blocks full use. Silent clip only safe."},
+    {"scene_id":"scene_07","audience_id":"dialect_region","ctr":0.90,"engagement":0.88,"note":"HIGHEST dialect_region CTR; SPOILER F01 BLOCKS USE. Must not override spoiler policy."},
+    {"scene_id":"scene_08","audience_id":"family",        "ctr":0.70,"engagement":0.72,"note":"Reflection strong for family"},
+    {"scene_id":"scene_08","audience_id":"young_adult",   "ctr":0.50,"engagement":0.48,"note":"Reflection lower for young_adult"},
+    {"scene_id":"scene_08","audience_id":"dialect_region","ctr":0.81,"engagement":0.80,"note":"Aftermath resonance strong"}
+  ]
+}

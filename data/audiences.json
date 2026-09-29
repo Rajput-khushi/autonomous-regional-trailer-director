@@ -1,0 +1,46 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional audience definitions for prototype evaluation. Audience data represents hypotheses and historical signals, NOT deterministic truth about real viewers. Do not use as ground truth for any real content decision.",
+  "evaluation_note": "PROXY BIAS RISK: historical data contains a suspicious correlation between dialect_region audience location attribute and comedy content preference. This correlation is a hypothesis risk flag, not a causal or deterministic rule. It must not be treated as audience truth. See historic_performance.json bias_note.",
+  "audiences": [
+    {
+      "audience_id": "family",
+      "label": "Family",
+      "rating_ceiling": "U",
+      "subtitle_track": "hi",
+      "alternate_subtitle_tracks": [],
+      "promise_seed": "Warmth, family connection, and the emotional stakes of a long-held secret.",
+      "preferred_emotions": ["warmth", "curiosity", "reflection"],
+      "allowed_framing_tags": ["warmth", "humour", "mystery_hook", "stakes_conflict", "sibling_bond"],
+      "avoid_tags": ["intense_threat", "physical_aggression", "suggestive_content", "strong_conflict"],
+      "note": "Mixed-age family audience. Content ceiling: U. Prefers warmth, emotional stakes, broad entertainment. Avoids frightening context.",
+      "synthetic": true
+    },
+    {
+      "audience_id": "young_adult",
+      "label": "Young Adult",
+      "rating_ceiling": "UA13+",
+      "subtitle_track": "hi",
+      "alternate_subtitle_tracks": [],
+      "promise_seed": "Identity, conflict, and the courage to uncover what family has hidden.",
+      "preferred_emotions": ["humour", "tension", "revelation", "conflict"],
+      "allowed_framing_tags": ["humour", "conflict", "mystery_hook", "escalation", "tension", "young_identity"],
+      "avoid_tags": ["misleading_intensity", "central_twist_reveal", "physical_danger_without_context"],
+      "note": "Young adult audience (18-35). Content ceiling: UA13+. Prefers pace, humour, identity, character conflict. Avoids misleading intensity claims.",
+      "synthetic": true
+    },
+    {
+      "audience_id": "dialect_region",
+      "label": "Dialect Region",
+      "rating_ceiling": "UA13+",
+      "subtitle_track": "bgc",
+      "alternate_subtitle_tracks": ["raj"],
+      "promise_seed": "A familiar voice telling an authentic story of family, secrets and belonging.",
+      "preferred_emotions": ["warmth", "curiosity", "conflict", "reflection"],
+      "allowed_framing_tags": ["familiar_voice", "family_reference", "mystery_hook", "cultural_context", "authentic_relationship"],
+      "avoid_tags": ["dialect_as_comedy", "location_as_deterministic_trait", "stereotype", "proxy_assumption"],
+      "note": "Haryanvi/Rajasthani dialect-region audience. bgc primary, raj alternate. PROXY BIAS RISK: observed comedy correlation in historical data is a hypothesis, NOT a causal rule. NATIVE_REVIEW: PENDING on all dialect subtitle cues.",
+      "synthetic": true
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "description": "One repair/change revision record — DATA_SPEC.md §19, SUMMARY.md §19.\nWritten to sample_run/revision_log.json.",
+  "properties": {
+    "revision": {
+      "title": "Revision",
+      "type": "integer"
+    },
+    "trigger": {
+      "title": "Trigger",
+      "type": "string"
+    },
+    "affected": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Affected",
+      "type": "array"
+    },
+    "unchanged": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unchanged",
+      "type": "array"
+    },
+    "action": {
+      "title": "Action",
+      "type": "string"
+    },
+    "validators_rerun": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Validators Rerun",
+      "type": "array"
+    },
+    "validation": {
+      "title": "Validation",
+      "type": "string"
+    },
+    "hashes_unchanged": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Hashes Unchanged",
+      "type": "object"
+    }
+  },
+  "required": [
+    "revision",
+    "trigger",
+    "affected",
+    "unchanged",
+    "action",
+    "validation"
+  ],
+  "title": "RevisionRecord",
+  "type": "object"
+}

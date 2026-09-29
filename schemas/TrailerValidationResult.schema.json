@@ -1,0 +1,207 @@
+{
+  "$defs": {
+    "TrailerStatus": {
+      "description": "Per-trailer / run status — VALIDATION_AND_TESTING.md §2, PROTOTYPE_SPEC.md §0.",
+      "enum": [
+        "PASS",
+        "PASS_WITH_WARNINGS",
+        "REPAIR_REQUIRED",
+        "REJECTED"
+      ],
+      "title": "TrailerStatus",
+      "type": "string"
+    },
+    "ValidationError": {
+      "description": "One structured validation error entry — DATA_SPEC.md §17.",
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "rule_id": {
+          "default": "",
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "segment_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Segment Id"
+        },
+        "message": {
+          "default": "",
+          "title": "Message",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "repairable": {
+          "default": true,
+          "title": "Repairable",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "title": "ValidationError",
+      "type": "object"
+    },
+    "ValidationWarning": {
+      "description": "One structured validation warning entry.",
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "rule_id": {
+          "default": "",
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "segment_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Segment Id"
+        },
+        "message": {
+          "default": "",
+          "title": "Message",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "title": "ValidationWarning",
+      "type": "object"
+    },
+    "ValidatorResult": {
+      "description": "Result returned by one validator — DATA_SPEC.md §17.\nPer-validator status: PASS | WARN | FAIL | SKIPPED.",
+      "properties": {
+        "validator": {
+          "title": "Validator",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/ValidatorStatus"
+        },
+        "errors": {
+          "items": {
+            "$ref": "#/$defs/ValidationError"
+          },
+          "title": "Errors",
+          "type": "array"
+        },
+        "warnings": {
+          "items": {
+            "$ref": "#/$defs/ValidationWarning"
+          },
+          "title": "Warnings",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "blocked_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Blocked By"
+        },
+        "details": {
+          "title": "Details",
+          "type": "object"
+        }
+      },
+      "required": [
+        "validator",
+        "status"
+      ],
+      "title": "ValidatorResult",
+      "type": "object"
+    },
+    "ValidatorStatus": {
+      "description": "Per-validator status — VALIDATION_AND_TESTING.md §2.",
+      "enum": [
+        "PASS",
+        "WARN",
+        "FAIL",
+        "SKIPPED"
+      ],
+      "title": "ValidatorStatus",
+      "type": "string"
+    }
+  },
+  "description": "Aggregate validation result for one trailer — DATA_SPEC.md §17.\nMatches the JSON shape: trailer_id, status, validators[], human_review_required,\nrepair_attempts.",
+  "properties": {
+    "trailer_id": {
+      "title": "Trailer Id",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/TrailerStatus"
+    },
+    "validators": {
+      "items": {
+        "$ref": "#/$defs/ValidatorResult"
+      },
+      "title": "Validators",
+      "type": "array"
+    },
+    "human_review_required": {
+      "default": false,
+      "title": "Human Review Required",
+      "type": "boolean"
+    },
+    "repair_attempts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Repair Attempts",
+      "type": "object"
+    }
+  },
+  "required": [
+    "trailer_id",
+    "status"
+  ],
+  "title": "TrailerValidationResult",
+  "type": "object"
+}

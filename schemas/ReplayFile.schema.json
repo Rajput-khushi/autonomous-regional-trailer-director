@@ -1,0 +1,47 @@
+{
+  "$defs": {
+    "ReplayMetadata": {
+      "description": "Metadata block inside a replay fixture file — DATA_SPEC.md §20.",
+      "properties": {
+        "fixture_version": {
+          "default": "1.0",
+          "title": "Fixture Version",
+          "type": "string"
+        },
+        "scenario": {
+          "default": "baseline",
+          "title": "Scenario",
+          "type": "string"
+        },
+        "input_hash": {
+          "default": "",
+          "title": "Input Hash",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "title": "ReplayMetadata",
+      "type": "object"
+    }
+  },
+  "description": "Top-level shape of a replay fixture file — DATA_SPEC.md §20, ARCHITECTURE.md §11.\nresponse contains the structured model output for the relevant node.",
+  "properties": {
+    "recorded_for": {
+      "$ref": "#/$defs/ReplayMetadata"
+    },
+    "response": {
+      "title": "Response",
+      "type": "object"
+    }
+  },
+  "required": [
+    "recorded_for",
+    "response"
+  ],
+  "title": "ReplayFile",
+  "type": "object"
+}

@@ -1,0 +1,89 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Hand-authored synthetic replay fixture. Represents deterministic baseline output of the analyze_story node. NOT evidence of live model behaviour. No LLM API was called to produce this file.",
+  "recorded_for": {
+    "node": "analyze_story",
+    "fixture_version": "1.0",
+    "episode_id": "ep_synth_001",
+    "scenario": "baseline",
+    "input_hash": "sha256:synthetic-fixture-v1-stable",
+    "note": "Deterministic replay. Same inputs must produce identical outputs in replay mode."
+  },
+  "response": {
+    "story_map": {
+      "episode_id": "ep_synth_001",
+      "title": "The Missing Letter [SYNTHETIC]",
+      "genre": ["family_drama", "mystery"],
+      "emotional_arc": ["warmth", "curiosity", "conflict", "tension", "threat", "revelation", "reflection"],
+      "characters": [
+        {"char_id":"char_dharam",  "name":"Dharam",        "role":"elder brother",           "actor_id":"actor_01"},
+        {"char_id":"char_sunita",  "name":"Sunita",        "role":"younger sister, protagonist","actor_id":"actor_02"},
+        {"char_id":"char_randhir", "name":"Randhir (Tau)", "role":"paternal uncle, patriarch","actor_id":"actor_03"},
+        {"char_id":"char_chachi",  "name":"Chachi",        "role":"neighbour",               "actor_id":"actor_04"}
+      ],
+      "relationships": [
+        {"a":"char_dharam",  "b":"char_sunita",  "relation":"sibling",      "visibility":"public"},
+        {"a":"char_randhir", "b":"char_dharam",  "relation":"uncle_nephew", "visibility":"public"},
+        {"a":"char_randhir", "b":"char_sunita",  "relation":"uncle_niece",  "visibility":"public"},
+        {"a":"char_chachi",  "b":"char_sunita",  "relation":"neighbour",    "visibility":"public"}
+      ],
+      "major_events": [
+        {"event_id":"E1","text":"Sunita learns a family letter is missing",     "scene_id":"scene_03"},
+        {"event_id":"E2","text":"Sunita and Dharam argue about the letter",     "scene_id":"scene_04"},
+        {"event_id":"E3","text":"Envelope found inside the harmonium",          "scene_id":"scene_05"},
+        {"event_id":"E4","text":"Night confrontation between Dharam and Randhir","scene_id":"scene_06"},
+        {"event_id":"E5","text":"Letter is read aloud; central secret revealed","scene_id":"scene_07"},
+        {"event_id":"E6","text":"Aftermath and partial reconciliation",          "scene_id":"scene_08"}
+      ],
+      "themes": ["family_secret", "identity", "hidden_past", "reconciliation"],
+      "narrative_hook": "A missing letter unlocks a twelve-year-old secret that redefines a family.",
+      "safe_claims": [
+        "A family unravels a long-kept secret",
+        "A sister's search for truth",
+        "A hidden letter changes everything"
+      ],
+      "forbidden_claims": [
+        "A murder mystery",
+        "A revenge thriller",
+        "A love story between Randhir and Sunita"
+      ]
+    },
+    "spoiler_map": {
+      "episode_id": "ep_synth_001",
+      "protected_facts": [
+        {
+          "fact_id": "F01",
+          "spoiler_level": "MAJOR",
+          "fact": "The letter reveals Randhir is Sunita's biological father.",
+          "reveal_windows": [{"scene_id":"scene_07","in":"00:04:50.000","out":"00:05:10.000"}],
+          "trigger_terms": ["biological father","her real father","asli baap","asli pita"]
+        },
+        {
+          "fact_id": "F02",
+          "spoiler_level": "MAJOR",
+          "fact": "Dharam hid the letter for twelve years.",
+          "reveal_windows": [
+            {"scene_id":"scene_06","in":"00:04:05.000","out":"00:04:20.000"},
+            {"scene_id":"scene_07","in":"00:04:30.000","out":"00:04:45.000"}
+          ],
+          "trigger_terms": ["hid the letter","hidden for twelve years","baarh saal tak chhupaya"]
+        },
+        {
+          "fact_id": "F03",
+          "spoiler_level": "MEDIUM",
+          "fact": "The letter was hidden inside the old harmonium.",
+          "reveal_windows": [{"scene_id":"scene_05","in":"00:03:10.000","out":"00:03:25.000"}],
+          "trigger_terms": ["inside the harmonium","harmonium ke andar"]
+        },
+        {
+          "fact_id": "F04",
+          "spoiler_level": "MEDIUM",
+          "fact": "The siblings partially reconcile at the end.",
+          "reveal_windows": [{"scene_id":"scene_08","in":"00:05:35.000","out":"00:05:55.000"}],
+          "trigger_terms": ["they reconcile","forgive","maafi"]
+        }
+      ],
+      "high_ctr_spoiler_warning": "scene_07 has highest historical CTR (0.90 dialect_region, 0.88 young_adult). It reveals F01 (MAJOR). Historical CTR CANNOT override POL-SPOILER-001."
+    }
+  }
+}

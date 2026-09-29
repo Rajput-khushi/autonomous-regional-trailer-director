@@ -1,0 +1,96 @@
+{
+  "$defs": {
+    "Audience": {
+      "description": "One audience profile — DATA_SPEC.md §13.\naudience_id must be one of: family, young_adult, dialect_region.",
+      "properties": {
+        "audience_id": {
+          "title": "Audience Id",
+          "type": "string"
+        },
+        "label": {
+          "default": "",
+          "title": "Label",
+          "type": "string"
+        },
+        "rating_ceiling": {
+          "title": "Rating Ceiling",
+          "type": "string"
+        },
+        "subtitle_track": {
+          "title": "Subtitle Track",
+          "type": "string"
+        },
+        "alternate_subtitle_tracks": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Alternate Subtitle Tracks",
+          "type": "array"
+        },
+        "promise_seed": {
+          "default": "",
+          "title": "Promise Seed",
+          "type": "string"
+        },
+        "preferred_emotions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Preferred Emotions",
+          "type": "array"
+        },
+        "allowed_framing_tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Allowed Framing Tags",
+          "type": "array"
+        },
+        "avoid_tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Avoid Tags",
+          "type": "array"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "audience_id",
+        "rating_ceiling",
+        "subtitle_track"
+      ],
+      "title": "Audience",
+      "type": "object"
+    }
+  },
+  "description": "Top-level audiences.json wrapper — DATA_SPEC.md §13.",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "audiences": {
+      "items": {
+        "$ref": "#/$defs/Audience"
+      },
+      "title": "Audiences",
+      "type": "array"
+    }
+  },
+  "required": [
+    "synthetic",
+    "audiences"
+  ],
+  "title": "AudiencesFile",
+  "type": "object"
+}

@@ -1,0 +1,183 @@
+{
+  "$defs": {
+    "DialectCue": {
+      "description": "One cue in a dialect (bgc / raj) subtitle track — DATA_SPEC.md §7.",
+      "properties": {
+        "cue_id": {
+          "title": "Cue Id",
+          "type": "string"
+        },
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "in": {
+          "title": "In",
+          "type": "string"
+        },
+        "out": {
+          "title": "Out",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "gloss_en": {
+          "default": "",
+          "title": "Gloss En",
+          "type": "string"
+        },
+        "aligns_with": {
+          "title": "Aligns With",
+          "type": "string"
+        },
+        "meaning_tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Meaning Tags",
+          "type": "array"
+        },
+        "stereotype_flags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Stereotype Flags",
+          "type": "array"
+        },
+        "native_review": {
+          "$ref": "#/$defs/NativeReviewStatus",
+          "default": "PENDING"
+        }
+      },
+      "required": [
+        "cue_id",
+        "scene_id",
+        "in",
+        "out",
+        "text",
+        "aligns_with"
+      ],
+      "title": "DialectCue",
+      "type": "object"
+    },
+    "NativeReviewStatus": {
+      "description": "Status of native-speaker review for dialect cues — DATA_SPEC.md §7.",
+      "enum": [
+        "PENDING",
+        "REVIEWED",
+        "WAIVED"
+      ],
+      "title": "NativeReviewStatus",
+      "type": "string"
+    },
+    "SourceCue": {
+      "description": "One cue in the source (hi) subtitle track — DATA_SPEC.md §7.",
+      "properties": {
+        "cue_id": {
+          "title": "Cue Id",
+          "type": "string"
+        },
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "in": {
+          "title": "In",
+          "type": "string"
+        },
+        "out": {
+          "title": "Out",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "gloss_en": {
+          "default": "",
+          "title": "Gloss En",
+          "type": "string"
+        },
+        "meaning_tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Meaning Tags",
+          "type": "array"
+        },
+        "source_line_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Line Id"
+        }
+      },
+      "required": [
+        "cue_id",
+        "scene_id",
+        "in",
+        "out",
+        "text"
+      ],
+      "title": "SourceCue",
+      "type": "object"
+    },
+    "SubtitleTracks": {
+      "description": "The three subtitle tracks — DATA_SPEC.md §7.\nhi = source; bgc = Haryanvi dialect; raj = Rajasthani dialect.",
+      "properties": {
+        "hi": {
+          "items": {
+            "$ref": "#/$defs/SourceCue"
+          },
+          "title": "Hi",
+          "type": "array"
+        },
+        "bgc": {
+          "items": {
+            "$ref": "#/$defs/DialectCue"
+          },
+          "title": "Bgc",
+          "type": "array"
+        },
+        "raj": {
+          "items": {
+            "$ref": "#/$defs/DialectCue"
+          },
+          "title": "Raj",
+          "type": "array"
+        }
+      },
+      "title": "SubtitleTracks",
+      "type": "object"
+    }
+  },
+  "description": "Top-level subtitles.json wrapper — DATA_SPEC.md §7.",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "tracks": {
+      "$ref": "#/$defs/SubtitleTracks"
+    }
+  },
+  "required": [
+    "synthetic",
+    "tracks"
+  ],
+  "title": "SubtitlesFile",
+  "type": "object"
+}

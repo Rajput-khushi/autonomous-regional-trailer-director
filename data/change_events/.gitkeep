@@ -1,0 +1,7 @@
+# data/change_events/ — Change event JSON files for change-impact runs.
+# Authority: DATA_SPEC.md §19, ARCHITECTURE.md §8.
+#
+# Files to create in Phase 2:
+#   music_03_expired.json — CONTRACT_UPDATE: music_03 rights expired 2026-10-01
+#
+# All files carry synthetic=true.

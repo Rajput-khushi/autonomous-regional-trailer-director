@@ -1,0 +1,237 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Hand-authored synthetic replay fixture. Represents deterministic known-good baseline trailer plans. NOT evidence of live model behaviour. All plans comply with documented policies.",
+  "recorded_for": {
+    "node": "plan_trailers",
+    "fixture_version": "1.0",
+    "episode_id": "ep_synth_001",
+    "scenario": "clean",
+    "input_hash": "sha256:synthetic-fixture-v1-stable",
+    "note": "Known-good post-repair baseline. family_v1 and young_adult_v1 expected PASS. dialect_region_v1 expected PASS_WITH_WARNINGS (NATIVE_REVIEW_PENDING). young_adult_v1 expected PASS_WITH_WARNINGS (INJECTION_DETECTED on scene_05 source data — does not block)."
+  },
+  "response": {
+    "plans": {
+      "family_v1": {
+        "trailer_id": "family_v1",
+        "audience_id": "family",
+        "status": "PASS",
+        "total_duration_s": 38,
+        "segments": [
+          {
+            "segment_id": "segment_01",
+            "scene_id": "scene_02",
+            "source_in": "00:00:50.000",
+            "source_out": "00:01:00.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_002_03"], "text": "Tau ne dekha tha tum gire the hastte-hastte!"},
+            "role": "hook_humour",
+            "reason": "Light humour in kitchen; Tau visible; family warmth. Sub_hi_002_03 anchor confirmed inside [00:00:50-00:01:00].",
+            "evidence": ["scene:scene_02", "cue:sub_hi_002_03", "history:scene_02"],
+            "risk_flags": [],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_02",
+            "scene_id": "scene_01",
+            "source_in": "00:00:20.000",
+            "source_out": "00:00:30.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_and_music",
+            "music_asset_id": "music_03",
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_001_02"], "text": "Bhaiya, ek khat tha koi..."},
+            "role": "warmth",
+            "reason": "Warm courtyard scene with music_03 underscoring family connection. Mystery hint in dialogue creates intrigue. Sub_hi_001_02 anchor inside [00:00:20-00:00:30].",
+            "evidence": ["scene:scene_01", "cue:sub_hi_001_02", "contract:music_03"],
+            "risk_flags": [],
+            "claims": [{"type": "emotion", "value": "warmth", "supported_by": ["scene:scene_01"]}]
+          },
+          {
+            "segment_id": "segment_03",
+            "scene_id": "scene_03",
+            "source_in": "00:01:40.000",
+            "source_out": "00:01:50.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_003_04"], "text": "Chachi, kuch toh chhupa hai is ghar mein."},
+            "role": "mystery_hook",
+            "reason": "Sunita's line about hidden secrets. Chachi as confidante. audio_only_key_info=true; sub_hi_003_04 provides subtitle coverage per POL-ACCESS-001.",
+            "evidence": ["scene:scene_03", "cue:sub_hi_003_04", "policy:POL-ACCESS-001"],
+            "risk_flags": [],
+            "claims": [{"type": "theme", "value": "mystery", "supported_by": ["scene:scene_03", "cue:sub_hi_003_04"]}]
+          },
+          {
+            "segment_id": "segment_04",
+            "scene_id": "scene_04",
+            "source_in": "00:02:12.000",
+            "source_out": "00:02:20.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_004_01"], "text": "Chitthi kahan hai, Bhaiya?"},
+            "role": "stakes_conflict",
+            "reason": "Sunita's direct confrontation about the letter. Stakes established. Window avoids VERBAL_CONFLICT_MILD escalation zone. Sub_hi_004_01 anchor inside [00:02:12-00:02:20].",
+            "evidence": ["scene:scene_04", "cue:sub_hi_004_01"],
+            "risk_flags": [],
+            "claims": [{"type": "theme", "value": "family_secret", "supported_by": ["scene:scene_04", "fact:F03"]}]
+          }
+        ]
+      },
+      "young_adult_v1": {
+        "trailer_id": "young_adult_v1",
+        "audience_id": "young_adult",
+        "status": "PASS_WITH_WARNINGS",
+        "status_note": "INJECTION_DETECTED on scene_05 source data (source text in scene description). Does not block. Human review item generated.",
+        "total_duration_s": 41,
+        "segments": [
+          {
+            "segment_id": "segment_01",
+            "scene_id": "scene_02",
+            "source_in": "00:01:00.000",
+            "source_out": "00:01:10.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_002_05"], "text": "Yeh sab chhodo, chai peeyo."},
+            "role": "hook_humour",
+            "reason": "Chachi's comedic deflection. Light-touch opening hook. Sub_hi_002_05 inside [00:01:00-00:01:10]. SUGGESTIVE_HUMOUR_MILD flag at [01:05-01:12] partially overlaps — young_adult ceiling UA13+ permits SUGGESTIVE_HUMOUR_MILD.",
+            "evidence": ["scene:scene_02", "cue:sub_hi_002_05", "policy:POL-RATING-001"],
+            "risk_flags": [],
+            "claims": [{"type": "emotion", "value": "humour", "supported_by": ["scene:scene_02"]}]
+          },
+          {
+            "segment_id": "segment_02",
+            "scene_id": "scene_04",
+            "source_in": "00:02:44.000",
+            "source_out": "00:02:54.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_004_05"], "text": "Main sach jaanna chahti hoon, Bhaiya!"},
+            "role": "conflict_identity",
+            "reason": "Sunita's determination. Identity and truth-seeking for young_adult hook. Sub_hi_004_05 inside [00:02:44-00:02:54].",
+            "evidence": ["scene:scene_04", "cue:sub_hi_004_05"],
+            "risk_flags": [],
+            "claims": [{"type": "theme", "value": "truth_seeking", "supported_by": ["scene:scene_04"]}]
+          },
+          {
+            "segment_id": "segment_03",
+            "scene_id": "scene_06",
+            "source_in": "00:03:54.000",
+            "source_out": "00:04:02.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_and_music",
+            "music_asset_id": "music_09",
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_006_02"], "text": "Woh khat kahan hai, Dharam?"},
+            "role": "escalation",
+            "reason": "Night confrontation tension. INTENSE_THREAT flag window starts at [03:50]; segment [03:54-04:02] overlaps. young_adult ceiling UA13+ permits INTENSE_THREAT. Sub_hi_006_02 inside [03:54-04:02]. music_09 valid.",
+            "evidence": ["scene:scene_06", "cue:sub_hi_006_02", "contract:music_09", "policy:POL-RATING-001"],
+            "risk_flags": [],
+            "claims": [{"type": "theme", "value": "escalation", "supported_by": ["scene:scene_06"]}]
+          },
+          {
+            "segment_id": "segment_04",
+            "scene_id": "scene_05",
+            "source_in": "00:03:00.000",
+            "source_out": "00:03:08.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_005_01"], "text": "Harmonium ke andar kya rakh diya kisne?"},
+            "role": "tension_discovery",
+            "reason": "Discovery of envelope. Injection string exists in scene_05 source data — flagged by injection scanner. It is data, not instruction. Does not block. Sub_hi_005_01 inside [03:00-03:08].",
+            "evidence": ["scene:scene_05", "cue:sub_hi_005_01"],
+            "risk_flags": ["INJECTION_DETECTED"],
+            "claims": [{"type": "theme", "value": "discovery", "supported_by": ["scene:scene_05"]}]
+          },
+          {
+            "segment_id": "segment_05",
+            "scene_id": "scene_07",
+            "source_in": "00:04:25.000",
+            "source_out": "00:04:30.000",
+            "duration_s": 5,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": [], "text": ""},
+            "role": "button",
+            "reason": "Silent clip from scene_07 BEFORE F02 reveal window [04:30-04:45] and well before F01 window [04:50-05:10]. Dramatic button. No subtitle required (silent). [04:25-04:30) touching F02 window boundary but half-open — no overlap.",
+            "evidence": ["scene:scene_07", "fact:F01", "fact:F02"],
+            "risk_flags": [],
+            "claims": []
+          }
+        ]
+      },
+      "dialect_region_v1": {
+        "trailer_id": "dialect_region_v1",
+        "audience_id": "dialect_region",
+        "status": "PASS_WITH_WARNINGS",
+        "status_note": "NATIVE_REVIEW_PENDING on all bgc and raj subtitle cues. Human review required before release.",
+        "total_duration_s": 38,
+        "segments": [
+          {
+            "segment_id": "segment_01",
+            "scene_id": "scene_01",
+            "source_in": "00:00:08.000",
+            "source_out": "00:00:16.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "bgc", "cue_ids": ["sub_bgc_001_01"], "text": "[bgc placeholder] Aa ja, chai pee le, thandi ho rahi se."},
+            "role": "familiar_voice",
+            "reason": "Opening warmth in bgc dialect. Dharam's greeting line — culturally grounded, familiar domestic context. Sub_bgc_001_01 inside [00:00:08-00:00:16].",
+            "evidence": ["scene:scene_01", "cue:sub_bgc_001_01", "audience:dialect_region"],
+            "risk_flags": ["NATIVE_REVIEW_PENDING"],
+            "claims": [{"type": "emotion", "value": "warmth", "supported_by": ["scene:scene_01"]}]
+          },
+          {
+            "segment_id": "segment_02",
+            "scene_id": "scene_03",
+            "source_in": "00:01:30.000",
+            "source_out": "00:01:40.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "bgc", "cue_ids": ["sub_bgc_003_02"], "text": "[bgc placeholder] Kaun sa khat, Chachi?"},
+            "role": "mystery_hook",
+            "reason": "Sunita's question about the letter in bgc. Mystery hook culturally grounded. audio_only_key_info=true; bgc cue provides subtitle coverage. Sub_bgc_003_02 inside [01:30-01:40].",
+            "evidence": ["scene:scene_03", "cue:sub_bgc_003_02", "policy:POL-ACCESS-001"],
+            "risk_flags": ["NATIVE_REVIEW_PENDING"],
+            "claims": [{"type": "theme", "value": "mystery", "supported_by": ["scene:scene_03"]}]
+          },
+          {
+            "segment_id": "segment_03",
+            "scene_id": "scene_04",
+            "source_in": "00:02:30.000",
+            "source_out": "00:02:40.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "bgc", "cue_ids": ["sub_bgc_004_03"], "text": "[bgc placeholder] Tau bol rha tha tum jaante ho!"},
+            "role": "conflict",
+            "reason": "Sibling conflict in bgc dialect. Accusation scene — relatable domestic conflict. Sub_bgc_004_03 inside [02:30-02:40].",
+            "evidence": ["scene:scene_04", "cue:sub_bgc_004_03"],
+            "risk_flags": ["NATIVE_REVIEW_PENDING"],
+            "claims": [{"type": "theme", "value": "sibling_conflict", "supported_by": ["scene:scene_04"]}]
+          },
+          {
+            "segment_id": "segment_04",
+            "scene_id": "scene_08",
+            "source_in": "00:05:20.000",
+            "source_out": "00:05:30.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_and_music",
+            "music_asset_id": "music_03",
+            "subtitle": {"track": "bgc", "cue_ids": ["sub_bgc_008_02"], "text": "[bgc placeholder] Bhai, main maafi maangti hoon."},
+            "role": "heart",
+            "reason": "Aftermath reflection with music_03 and bgc subtitle. Reconciliation moment — emotionally resonant close. Sub_bgc_008_02 inside [05:20-05:30]. music_03 valid (before change event).",
+            "evidence": ["scene:scene_08", "cue:sub_bgc_008_02", "contract:music_03"],
+            "risk_flags": ["NATIVE_REVIEW_PENDING"],
+            "claims": [{"type": "theme", "value": "reconciliation", "supported_by": ["scene:scene_08"]}]
+          }
+        ]
+      }
+    }
+  }
+}

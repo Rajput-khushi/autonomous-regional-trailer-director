@@ -1,0 +1,363 @@
+{
+  "campaign": {
+    "campaign_end": "2026-11-05",
+    "campaign_start": "2026-10-05"
+  },
+  "evaluation_date": "2026-10-06",
+  "rating_order": [
+    "U",
+    "UA13+",
+    "UA16+",
+    "A"
+  ],
+  "rules": [
+    {
+      "category": "MUSIC_PROMOTIONAL_USE",
+      "rule": {
+        "promotional_use": true,
+        "territories": [
+          "IN"
+        ],
+        "valid_from": "2025-01-01",
+        "valid_until": "2027-12-31"
+      },
+      "rule_id": "RULE-CONTRACT-C-MUS-03",
+      "scope": {
+        "asset_id": "music_03",
+        "asset_type": "music"
+      },
+      "severity": "HARD",
+      "source_ref": "C-MUS-03"
+    },
+    {
+      "category": "MUSIC_PROMOTIONAL_USE",
+      "rule": {
+        "promotional_use": true,
+        "territories": [
+          "IN"
+        ],
+        "valid_from": "2025-01-01",
+        "valid_until": "2027-12-31"
+      },
+      "rule_id": "RULE-CONTRACT-C-MUS-05",
+      "scope": {
+        "asset_id": "music_05",
+        "asset_type": "music"
+      },
+      "severity": "HARD",
+      "source_ref": "C-MUS-05"
+    },
+    {
+      "category": "MUSIC_PROMOTIONAL_USE",
+      "rule": {
+        "promotional_use": false,
+        "territories": [
+          "IN"
+        ],
+        "valid_from": "2025-01-01",
+        "valid_until": "2027-12-31"
+      },
+      "rule_id": "RULE-CONTRACT-C-MUS-07",
+      "scope": {
+        "asset_id": "music_07",
+        "asset_type": "music"
+      },
+      "severity": "HARD",
+      "source_ref": "C-MUS-07"
+    },
+    {
+      "category": "MUSIC_PROMOTIONAL_USE",
+      "rule": {
+        "promotional_use": true,
+        "territories": [
+          "IN"
+        ],
+        "valid_from": "2025-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "rule_id": "RULE-CONTRACT-C-MUS-09",
+      "scope": {
+        "asset_id": "music_09",
+        "asset_type": "music"
+      },
+      "severity": "HARD",
+      "source_ref": "C-MUS-09"
+    },
+    {
+      "category": "ACTOR_PROMOTIONAL_USE",
+      "rule": {
+        "promotional_use": true,
+        "territories": [
+          "IN"
+        ],
+        "valid_from": "2025-06-01",
+        "valid_until": "2027-05-31"
+      },
+      "rule_id": "RULE-CONTRACT-C-ACT-01",
+      "scope": {
+        "asset_id": "actor_01",
+        "asset_type": "actor"
+      },
+      "severity": "HARD",
+      "source_ref": "C-ACT-01"
+    },
+    {
+      "category": "ACTOR_PROMOTIONAL_USE",
+      "rule": {
+        "promotional_use": true,
+        "territories": [
+          "IN"
+        ],
+        "valid_from": "2025-06-01",
+        "valid_until": "2027-05-31"
+      },
+      "rule_id": "RULE-CONTRACT-C-ACT-02",
+      "scope": {
+        "asset_id": "actor_02",
+        "asset_type": "actor"
+      },
+      "severity": "HARD",
+      "source_ref": "C-ACT-02"
+    },
+    {
+      "category": "ACTOR_PROMOTIONAL_USE",
+      "rule": {
+        "promotional_use": true,
+        "territories": [
+          "IN"
+        ],
+        "valid_from": "2025-06-01",
+        "valid_until": "2027-05-31"
+      },
+      "rule_id": "RULE-CONTRACT-C-ACT-03",
+      "scope": {
+        "asset_id": "actor_03",
+        "asset_type": "actor"
+      },
+      "severity": "HARD",
+      "source_ref": "C-ACT-03"
+    },
+    {
+      "category": "ACTOR_PROMOTIONAL_USE",
+      "rule": {
+        "promotional_use": true,
+        "territories": [
+          "IN"
+        ],
+        "valid_from": "2025-06-01",
+        "valid_until": "2027-05-31"
+      },
+      "rule_id": "RULE-CONTRACT-C-ACT-04",
+      "scope": {
+        "asset_id": "actor_04",
+        "asset_type": "actor"
+      },
+      "severity": "HARD",
+      "source_ref": "C-ACT-04"
+    },
+    {
+      "category": "RIGHTS",
+      "rule": {
+        "audience_ceilings": {
+          "dialect_region": "UA13+",
+          "family": "U",
+          "young_adult": "UA13+"
+        },
+        "flag_min_rating": {
+          "INTENSE_THREAT": "UA13+",
+          "PHYSICAL_AGGRESSION_MODERATE": "UA13+",
+          "SUGGESTIVE_HUMOUR_MILD": "UA13+",
+          "VERBAL_CONFLICT_MILD": "U"
+        }
+      },
+      "rule_id": "POL-RATING-001",
+      "scope": {},
+      "severity": "HARD",
+      "source_ref": "POL-RATING-001"
+    },
+    {
+      "category": "RIGHTS",
+      "rule": {
+        "audience_max_spoiler": {
+          "dialect_region": "LOW",
+          "family": "LOW",
+          "young_adult": "LOW"
+        },
+        "override_note": "Historical performance data (CTR, engagement) NEVER overrides spoiler rules."
+      },
+      "rule_id": "POL-SPOILER-001",
+      "scope": {},
+      "severity": "HARD",
+      "source_ref": "POL-SPOILER-001"
+    },
+    {
+      "category": "RIGHTS",
+      "rule": {
+        "authoritative_source": "story_facts.json",
+        "check_events": true,
+        "check_relationships": true,
+        "forbidden_claim_patterns": [
+          "murder",
+          "ghost",
+          "haunted",
+          "love triangle",
+          "romance",
+          "spouse",
+          "husband",
+          "wife",
+          "married to"
+        ]
+      },
+      "rule_id": "POL-STORY-001",
+      "scope": {},
+      "severity": "HARD",
+      "source_ref": "POL-STORY-001"
+    },
+    {
+      "category": "RIGHTS",
+      "rule": {
+        "allowed_native_review_for_approval": [
+          "APPROVED"
+        ],
+        "meaning_tags_must_match_hi": true,
+        "reject_on": [
+          "REJECTED"
+        ],
+        "stereotype_flags_must_be_empty_or_reviewed": true,
+        "warn_on": [
+          "PENDING"
+        ]
+      },
+      "rule_id": "POL-DIALECT-001",
+      "scope": {},
+      "severity": "HARD",
+      "source_ref": "POL-DIALECT-001"
+    },
+    {
+      "category": "RIGHTS",
+      "rule": {
+        "require_subtitle_for_audio_only_key_info": true,
+        "silent_segment_exempt": true
+      },
+      "rule_id": "POL-ACCESS-001",
+      "scope": {},
+      "severity": "HARD",
+      "source_ref": "POL-ACCESS-001"
+    },
+    {
+      "category": "RIGHTS",
+      "rule": {
+        "enforce_duration_window": true,
+        "no_segment_overlap": true,
+        "segments_within_scene": true,
+        "source_in_lt_out": true
+      },
+      "rule_id": "POL-DURATION-001",
+      "scope": {},
+      "severity": "HARD",
+      "source_ref": "POL-DURATION-001"
+    },
+    {
+      "category": "RIGHTS",
+      "rule": {
+        "enforce_run_budget": true,
+        "fallback_profile_on_overrun": "lite",
+        "reject_if_lite_exceeds_budget": true
+      },
+      "rule_id": "POL-BUDGET-001",
+      "scope": {},
+      "severity": "HARD",
+      "source_ref": "POL-BUDGET-001"
+    },
+    {
+      "category": "RATING",
+      "rule": {
+        "allowed_framing_tags": [
+          "warmth",
+          "humour",
+          "mystery_hook",
+          "stakes_conflict",
+          "sibling_bond"
+        ],
+        "avoid_tags": [
+          "intense_threat",
+          "physical_aggression",
+          "suggestive_content",
+          "strong_conflict"
+        ],
+        "rating_ceiling": "U"
+      },
+      "rule_id": "RULE-RATING-family",
+      "scope": {
+        "audience_id": "family"
+      },
+      "severity": "HARD",
+      "source_ref": "audience:family"
+    },
+    {
+      "category": "RATING",
+      "rule": {
+        "allowed_framing_tags": [
+          "humour",
+          "conflict",
+          "mystery_hook",
+          "escalation",
+          "tension",
+          "young_identity"
+        ],
+        "avoid_tags": [
+          "misleading_intensity",
+          "central_twist_reveal",
+          "physical_danger_without_context"
+        ],
+        "rating_ceiling": "UA13+"
+      },
+      "rule_id": "RULE-RATING-young_adult",
+      "scope": {
+        "audience_id": "young_adult"
+      },
+      "severity": "HARD",
+      "source_ref": "audience:young_adult"
+    },
+    {
+      "category": "RATING",
+      "rule": {
+        "allowed_framing_tags": [
+          "familiar_voice",
+          "family_reference",
+          "mystery_hook",
+          "cultural_context",
+          "authentic_relationship"
+        ],
+        "avoid_tags": [
+          "dialect_as_comedy",
+          "location_as_deterministic_trait",
+          "stereotype",
+          "proxy_assumption"
+        ],
+        "rating_ceiling": "UA13+"
+      },
+      "rule_id": "RULE-RATING-dialect_region",
+      "scope": {
+        "audience_id": "dialect_region"
+      },
+      "severity": "HARD",
+      "source_ref": "audience:dialect_region"
+    },
+    {
+      "category": "BUDGET",
+      "rule": {
+        "fallback_profile": "lite",
+        "run_budget": 2.0
+      },
+      "rule_id": "RULE-BUDGET-RUN",
+      "scope": {
+        "currency_unit": "USD_synthetic"
+      },
+      "severity": "HARD",
+      "source_ref": "cost_sheet:run_budget"
+    }
+  ],
+  "synthetic": true,
+  "version": 1
+}

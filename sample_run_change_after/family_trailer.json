@@ -1,0 +1,324 @@
+{
+  "audience": "family",
+  "audience_promise": "A family's warmth hides a secret that will change everything.",
+  "cost_profile": "full",
+  "creative_brief": "",
+  "dependency_index": {
+    "family_v1.segment_01": {
+      "audience": "family",
+      "contracts": [
+        "actor_01",
+        "actor_02",
+        "actor_03"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_02"
+      ],
+      "subtitle_cues": [
+        "sub_hi_002_03"
+      ]
+    },
+    "family_v1.segment_02": {
+      "audience": "family",
+      "contracts": [
+        "music_03",
+        "actor_01",
+        "actor_02",
+        "actor_03"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_01"
+      ],
+      "subtitle_cues": [
+        "sub_hi_001_02"
+      ]
+    },
+    "family_v1.segment_03": {
+      "audience": "family",
+      "contracts": [
+        "actor_02",
+        "actor_04"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_03"
+      ],
+      "subtitle_cues": [
+        "sub_hi_003_04"
+      ]
+    },
+    "family_v1.segment_04": {
+      "audience": "family",
+      "contracts": [
+        "actor_01",
+        "actor_02"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_04"
+      ],
+      "subtitle_cues": [
+        "sub_hi_004_01"
+      ]
+    }
+  },
+  "duration_seconds": 38.0,
+  "emotional_journey": [],
+  "estimated_cost": 0.27,
+  "fallback_plan": null,
+  "revision": 0,
+  "segments": [
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "family",
+        "contracts": [
+          "actor_01",
+          "actor_02",
+          "actor_03"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_02"
+        ],
+        "subtitle_cues": [
+          "sub_hi_002_03"
+        ]
+      },
+      "evidence": [
+        "scene:scene_02",
+        "cue:sub_hi_002_03",
+        "history:scene_02"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Light humour in kitchen; Tau visible; family warmth. Sub_hi_002_03 anchor confirmed inside [00:00:50-00:01:00].",
+      "risk_flags": [],
+      "role": "hook_humour",
+      "segment_id": "segment_01",
+      "source_in": "00:00:50.000",
+      "source_out": "00:01:00.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_002_03"
+        ],
+        "text": "Tau ne dekha tha tum gire the hastte-hastte!",
+        "track": "hi"
+      },
+      "video": "scene_02"
+    },
+    {
+      "audio_mode": "dialogue_and_music",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_01"
+          ],
+          "type": "emotion"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "family",
+        "contracts": [
+          "music_03",
+          "actor_01",
+          "actor_02",
+          "actor_03"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_01"
+        ],
+        "subtitle_cues": [
+          "sub_hi_001_02"
+        ]
+      },
+      "evidence": [
+        "scene:scene_01",
+        "cue:sub_hi_001_02",
+        "contract:music_03"
+      ],
+      "framing_tags": [],
+      "music_asset_id": "music_05",
+      "reason": "Warm courtyard scene with music_03 underscoring family connection. Mystery hint in dialogue creates intrigue. Sub_hi_001_02 anchor inside [00:00:20-00:00:30].",
+      "risk_flags": [],
+      "role": "warmth",
+      "segment_id": "segment_02",
+      "source_in": "00:00:20.000",
+      "source_out": "00:00:30.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_001_02"
+        ],
+        "text": "Bhaiya, ek khat tha koi...",
+        "track": "hi"
+      },
+      "video": "scene_01"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_03",
+            "cue:sub_hi_003_04"
+          ],
+          "type": "theme"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "family",
+        "contracts": [
+          "actor_02",
+          "actor_04"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_03"
+        ],
+        "subtitle_cues": [
+          "sub_hi_003_04"
+        ]
+      },
+      "evidence": [
+        "scene:scene_03",
+        "cue:sub_hi_003_04",
+        "policy:POL-ACCESS-001"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Sunita's line about hidden secrets. Chachi as confidante. audio_only_key_info=true; sub_hi_003_04 provides subtitle coverage per POL-ACCESS-001.",
+      "risk_flags": [],
+      "role": "mystery_hook",
+      "segment_id": "segment_03",
+      "source_in": "00:01:40.000",
+      "source_out": "00:01:50.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_003_04"
+        ],
+        "text": "Chachi, kuch toh chhupa hai is ghar mein.",
+        "track": "hi"
+      },
+      "video": "scene_03"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_04",
+            "fact:F03"
+          ],
+          "type": "theme"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "family",
+        "contracts": [
+          "actor_01",
+          "actor_02"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_04"
+        ],
+        "subtitle_cues": [
+          "sub_hi_004_01"
+        ]
+      },
+      "evidence": [
+        "scene:scene_04",
+        "cue:sub_hi_004_01"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Sunita's direct confrontation about the letter. Stakes established. Window avoids VERBAL_CONFLICT_MILD escalation zone. Sub_hi_004_01 anchor inside [00:02:12-00:02:20].",
+      "risk_flags": [],
+      "role": "stakes_conflict",
+      "segment_id": "segment_04",
+      "source_in": "00:02:12.000",
+      "source_out": "00:02:20.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_004_01"
+        ],
+        "text": "Chitthi kahan hai, Bhaiya?",
+        "track": "hi"
+      },
+      "video": "scene_04"
+    }
+  ],
+  "synthetic": true,
+  "synthetic_notice": "Trailer plan generated from synthetic fixture. Not STAGE content.",
+  "tagline": "",
+  "text_cards": [],
+  "trailer_id": "family_v1",
+  "transitions": [],
+  "validation": null,
+  "voice_over": null
+}

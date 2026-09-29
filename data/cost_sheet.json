@@ -1,0 +1,37 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional cost sheet for prototype evaluation. Currency is USD_synthetic. Rates are invented for demonstration purposes.",
+  "currency": "USD_synthetic",
+  "run_budget": 2.00,
+  "rates": {
+    "multimodal_scene_analysis": 0.05,
+    "story_analysis_call":       0.05,
+    "audience_call":             0.03,
+    "planning_call":             0.05,
+    "repair_rerank_call":        0.02,
+    "mock_call":                 0.00
+  },
+  "profiles": {
+    "full": {
+      "multimodal_scene_analysis": 8,
+      "story_analysis_call":       1,
+      "audience_call":             3,
+      "planning_call":             3,
+      "repair_rerank_call":        6
+    },
+    "lite": {
+      "multimodal_scene_analysis": 0,
+      "story_analysis_call":       1,
+      "audience_call":             1,
+      "planning_call":             1,
+      "repair_rerank_call":        0
+    }
+  },
+  "derived_costs": {
+    "full_total_usd_synthetic": 0.81,
+    "lite_total_usd_synthetic": 0.08,
+    "note": "full: (8×0.05)+(1×0.05)+(3×0.03)+(3×0.05)+(6×0.02) = 0.40+0.05+0.09+0.15+0.12 = 0.81. lite: (0)+(1×0.05)+(1×0.03)+(1×0.05)+(0) = 0.13. Both within run_budget 2.00."
+  },
+  "fallback_profile": "lite",
+  "budget_test_note": "Default fixture runs within budget using full profile. To test fallback: set run_budget=0.50 and full_total=0.81 exceeds budget, triggering switch to lite (0.13 < 0.50). To test rejection: set run_budget=0.05 and both profiles exceed it."
+}

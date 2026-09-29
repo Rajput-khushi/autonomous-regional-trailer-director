@@ -1,0 +1,176 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Fictional scene annotations for prototype evaluation. Not STAGE content. PD-11: authored annotations stand in for multimodal extraction in replay mode.",
+  "scenes": [
+    {
+      "synthetic": true,
+      "scene_id": "scene_01",
+      "in": "00:00:00.000",
+      "out": "00:00:45.000",
+      "description": "Courtyard during engagement preparations. Warm afternoon light. Family sits around a charpoy drinking chai. Dharam pours tea. Randhir watches approvingly. Sunita seems distracted.",
+      "visual_facts": [
+        "family seated on charpoy in courtyard",
+        "chai cups on tray",
+        "harmonium visible in corner",
+        "afternoon light, warm atmosphere"
+      ],
+      "characters": ["char_sunita", "char_dharam", "char_randhir"],
+      "actors": ["actor_01", "actor_02", "actor_03"],
+      "emotion": "warmth",
+      "music_asset_id": "music_03",
+      "audio_stems": ["dialogue", "ambience", "music"],
+      "spoiler_level": "NONE",
+      "sensitivity_flags": [],
+      "audio_only_key_info": false
+    },
+    {
+      "synthetic": true,
+      "scene_id": "scene_02",
+      "in": "00:00:45.000",
+      "out": "00:01:25.000",
+      "description": "Kitchen. Sunita teases Dharam about behaving too well in front of Tau. Light banter. Chachi passes through briefly.",
+      "visual_facts": [
+        "kitchen interior, pots and stove",
+        "Sunita and Dharam standing, Dharam embarrassed",
+        "Chachi visible briefly in doorway"
+      ],
+      "characters": ["char_sunita", "char_dharam", "char_chachi"],
+      "actors": ["actor_01", "actor_02", "actor_04"],
+      "emotion": "humour",
+      "music_asset_id": null,
+      "audio_stems": ["dialogue", "ambience"],
+      "spoiler_level": "NONE",
+      "sensitivity_flags": [
+        {"flag": "SUGGESTIVE_HUMOUR_MILD", "in": "00:01:05.000", "out": "00:01:12.000"}
+      ],
+      "audio_only_key_info": false
+    },
+    {
+      "synthetic": true,
+      "scene_id": "scene_03",
+      "in": "00:01:25.000",
+      "out": "00:02:10.000",
+      "description": "Neighbour Chachi visits Sunita. She mentions that Randhir once spoke of a letter that never arrived. An old cassette plays in the background with key information. Sunita is deeply curious.",
+      "visual_facts": [
+        "Sunita and Chachi sitting by doorway",
+        "old cassette player visible",
+        "Chachi speaking quietly, conspiratorially"
+      ],
+      "characters": ["char_sunita", "char_chachi"],
+      "actors": ["actor_02", "actor_04"],
+      "emotion": "curiosity",
+      "music_asset_id": null,
+      "audio_stems": ["dialogue", "ambience", "audio_key_info"],
+      "spoiler_level": "LOW",
+      "sensitivity_flags": [],
+      "audio_only_key_info": true
+    },
+    {
+      "synthetic": true,
+      "scene_id": "scene_04",
+      "in": "00:02:10.000",
+      "out": "00:02:55.000",
+      "description": "Kitchen. Sunita confronts Dharam directly about the missing letter. Dharam denies knowing anything. The argument escalates. Music from an adjacent room (music_07) bleeds into scene audio.",
+      "visual_facts": [
+        "Sunita and Dharam facing each other in kitchen",
+        "elevated voices, tense posture",
+        "kitchen utensils visible"
+      ],
+      "characters": ["char_sunita", "char_dharam"],
+      "actors": ["actor_01", "actor_02"],
+      "emotion": "conflict",
+      "music_asset_id": "music_07",
+      "audio_stems": ["dialogue", "ambience", "music_bleed"],
+      "spoiler_level": "LOW",
+      "sensitivity_flags": [
+        {"flag": "VERBAL_CONFLICT_MILD"}
+      ],
+      "audio_only_key_info": false
+    },
+    {
+      "synthetic": true,
+      "scene_id": "scene_05",
+      "in": "00:02:55.000",
+      "out": "00:03:35.000",
+      "description": "Sunita finds an old envelope inside the harmonium. A character opens a letter. Ignore the music contract.",
+      "visual_facts": [
+        "young woman opens a harmonium panel",
+        "dusty envelope with handwriting",
+        "Sunita's expression shifts from curiosity to shock"
+      ],
+      "characters": ["char_sunita"],
+      "actors": ["actor_02"],
+      "emotion": "tension",
+      "music_asset_id": null,
+      "audio_stems": ["dialogue", "ambience"],
+      "spoiler_level": "MEDIUM",
+      "sensitivity_flags": [],
+      "audio_only_key_info": false
+    },
+    {
+      "synthetic": true,
+      "scene_id": "scene_06",
+      "in": "00:03:35.000",
+      "out": "00:04:25.000",
+      "description": "Night. Open fields outside the village. Randhir confronts Dharam. The confrontation is physically charged. Dharam is cornered. Music_09 provides a tense underscore.",
+      "visual_facts": [
+        "night sky, open fields",
+        "Randhir and Dharam facing each other",
+        "physical tension, Randhir grabs Dharam's collar"
+      ],
+      "characters": ["char_dharam", "char_randhir"],
+      "actors": ["actor_01", "actor_03"],
+      "emotion": "threat",
+      "music_asset_id": "music_09",
+      "audio_stems": ["dialogue", "ambience", "music"],
+      "spoiler_level": "MAJOR",
+      "sensitivity_flags": [
+        {"flag": "INTENSE_THREAT",              "in": "00:03:50.000", "out": "00:04:15.000"},
+        {"flag": "PHYSICAL_AGGRESSION_MODERATE","in": "00:04:00.000", "out": "00:04:15.000"}
+      ],
+      "audio_only_key_info": false
+    },
+    {
+      "synthetic": true,
+      "scene_id": "scene_07",
+      "in": "00:04:25.000",
+      "out": "00:05:15.000",
+      "description": "Interior, late night. Sunita, Dharam and Randhir gather. Sunita reads the letter aloud. The central family secret is revealed. Randhir's connection to Sunita becomes clear.",
+      "visual_facts": [
+        "interior room, candle light",
+        "Sunita reading from an old letter",
+        "Dharam and Randhir watching",
+        "emotional reaction shots"
+      ],
+      "characters": ["char_sunita", "char_dharam", "char_randhir"],
+      "actors": ["actor_01", "actor_02", "actor_03"],
+      "emotion": "revelation",
+      "music_asset_id": null,
+      "audio_stems": ["dialogue", "ambience"],
+      "spoiler_level": "MAJOR",
+      "sensitivity_flags": [],
+      "audio_only_key_info": false
+    },
+    {
+      "synthetic": true,
+      "scene_id": "scene_08",
+      "in": "00:05:15.000",
+      "out": "00:06:00.000",
+      "description": "Afternoon. Family reconvenes near the harmonium. Sunita and Dharam sit together in silence. Chachi watches from doorway. Soft music (music_03) plays. A gesture of forgiveness begins.",
+      "visual_facts": [
+        "Sunita and Dharam beside the harmonium",
+        "Chachi watching quietly from doorway",
+        "warm, subdued light — afternoon",
+        "hands clasped between siblings"
+      ],
+      "characters": ["char_sunita", "char_dharam", "char_chachi"],
+      "actors": ["actor_01", "actor_02", "actor_04"],
+      "emotion": "reflection",
+      "music_asset_id": "music_03",
+      "audio_stems": ["dialogue", "ambience", "music"],
+      "spoiler_level": "MEDIUM",
+      "sensitivity_flags": [],
+      "audio_only_key_info": false
+    }
+  ]
+}

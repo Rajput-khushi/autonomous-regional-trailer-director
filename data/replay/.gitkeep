@@ -1,0 +1,14 @@
+# data/replay/ — Deterministic model response fixtures.
+# Authority: ARCHITECTURE.md §11, DATA_SPEC.md §20.
+#
+# Files to create in Phase 2/3:
+#   story_analysis.baseline.json       — StoryAnalyzer response
+#   audience_strategy.baseline.json    — AudienceStrategyPlanner response
+#   trailer_plans.traps.json           — TrailerPlanner (traps scenario: seeded violations)
+#   trailer_plans.clean.json           — TrailerPlanner (clean scenario: baseline plans)
+#   repair_choice.baseline.json        — Optional RepairChoice response
+#
+# All files carry synthetic=true.
+# The "traps" scenario contains:
+#   (a) dialect_region_v1.segment_03 = scene_07 [04:48, 04:56) → SPOILER_MAJOR (F01)
+#   (b) family_v1.segmentN uses music_07 → RIGHTS_PROMO_NOT_PERMITTED + RIGHTS_EXPIRED

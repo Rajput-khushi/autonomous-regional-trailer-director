@@ -1,0 +1,39 @@
+{
+  "description": "scene_engagement table — DATA_SPEC.md §15.\nscene_engagement: {scene_id: {audience_id: float (0-1)}}.\nHypothesis input only; never a hard selection rule (SUMMARY.md §15).",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "signal": {
+      "default": "",
+      "title": "Signal",
+      "type": "string"
+    },
+    "bias_note": {
+      "default": "",
+      "title": "Bias Note",
+      "type": "string"
+    },
+    "scene_engagement": {
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "type": "object"
+      },
+      "title": "Scene Engagement",
+      "type": "object"
+    }
+  },
+  "required": [
+    "synthetic"
+  ],
+  "title": "HistoricPerformance",
+  "type": "object"
+}

@@ -1,0 +1,406 @@
+{
+  "audience": "young_adult",
+  "audience_promise": "When a sealed letter breaks twelve years of silence — whose truth survives?",
+  "cost_profile": "full",
+  "creative_brief": "",
+  "dependency_index": {
+    "young_adult_v1.segment_01": {
+      "audience": "young_adult",
+      "contracts": [
+        "actor_01",
+        "actor_02",
+        "actor_03"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_02"
+      ],
+      "subtitle_cues": [
+        "sub_hi_002_05"
+      ]
+    },
+    "young_adult_v1.segment_02": {
+      "audience": "young_adult",
+      "contracts": [
+        "actor_01",
+        "actor_02"
+      ],
+      "facts": [],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_04"
+      ],
+      "subtitle_cues": [
+        "sub_hi_004_05"
+      ]
+    },
+    "young_adult_v1.segment_03": {
+      "audience": "young_adult",
+      "contracts": [
+        "music_09",
+        "actor_01",
+        "actor_03"
+      ],
+      "facts": [
+        "F02"
+      ],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_06"
+      ],
+      "subtitle_cues": [
+        "sub_hi_006_02"
+      ]
+    },
+    "young_adult_v1.segment_04": {
+      "audience": "young_adult",
+      "contracts": [
+        "actor_02"
+      ],
+      "facts": [
+        "F03"
+      ],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_05"
+      ],
+      "subtitle_cues": [
+        "sub_hi_005_01"
+      ]
+    },
+    "young_adult_v1.segment_05": {
+      "audience": "young_adult",
+      "contracts": [
+        "actor_01",
+        "actor_02",
+        "actor_03"
+      ],
+      "facts": [
+        "F01",
+        "F02"
+      ],
+      "policies": [
+        "POL-RATING-001",
+        "POL-SPOILER-001",
+        "POL-STORY-001",
+        "POL-ACCESS-001"
+      ],
+      "scene": [
+        "scene_07"
+      ],
+      "subtitle_cues": []
+    }
+  },
+  "duration_seconds": 41.0,
+  "emotional_journey": [],
+  "estimated_cost": 0.27,
+  "fallback_plan": null,
+  "revision": 0,
+  "segments": [
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_02"
+          ],
+          "type": "emotion"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "young_adult",
+        "contracts": [
+          "actor_01",
+          "actor_02",
+          "actor_03"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_02"
+        ],
+        "subtitle_cues": [
+          "sub_hi_002_05"
+        ]
+      },
+      "evidence": [
+        "scene:scene_02",
+        "cue:sub_hi_002_05",
+        "policy:POL-RATING-001"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Chachi's comedic deflection. Light-touch opening hook. Sub_hi_002_05 inside [00:01:00-00:01:10]. SUGGESTIVE_HUMOUR_MILD flag at [01:05-01:12] partially overlaps — young_adult ceiling UA13+ permits SUGGESTIVE_HUMOUR_MILD.",
+      "risk_flags": [],
+      "role": "hook_humour",
+      "segment_id": "segment_01",
+      "source_in": "00:01:00.000",
+      "source_out": "00:01:10.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_002_05"
+        ],
+        "text": "Yeh sab chhodo, chai peeyo.",
+        "track": "hi"
+      },
+      "video": "scene_02"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_04"
+          ],
+          "type": "theme"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "young_adult",
+        "contracts": [
+          "actor_01",
+          "actor_02"
+        ],
+        "facts": [],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_04"
+        ],
+        "subtitle_cues": [
+          "sub_hi_004_05"
+        ]
+      },
+      "evidence": [
+        "scene:scene_04",
+        "cue:sub_hi_004_05"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Sunita's determination. Identity and truth-seeking for young_adult hook. Sub_hi_004_05 inside [00:02:44-00:02:54].",
+      "risk_flags": [],
+      "role": "conflict_identity",
+      "segment_id": "segment_02",
+      "source_in": "00:02:44.000",
+      "source_out": "00:02:54.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_004_05"
+        ],
+        "text": "Main sach jaanna chahti hoon, Bhaiya!",
+        "track": "hi"
+      },
+      "video": "scene_04"
+    },
+    {
+      "audio_mode": "dialogue_and_music",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_06"
+          ],
+          "type": "theme"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "young_adult",
+        "contracts": [
+          "music_09",
+          "actor_01",
+          "actor_03"
+        ],
+        "facts": [
+          "F02"
+        ],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_06"
+        ],
+        "subtitle_cues": [
+          "sub_hi_006_02"
+        ]
+      },
+      "evidence": [
+        "scene:scene_06",
+        "cue:sub_hi_006_02",
+        "contract:music_09",
+        "policy:POL-RATING-001"
+      ],
+      "framing_tags": [],
+      "music_asset_id": "music_09",
+      "reason": "Night confrontation tension. INTENSE_THREAT flag window starts at [03:50]; segment [03:54-04:02] overlaps. young_adult ceiling UA13+ permits INTENSE_THREAT. Sub_hi_006_02 inside [03:54-04:02]. music_09 valid.",
+      "risk_flags": [],
+      "role": "escalation",
+      "segment_id": "segment_03",
+      "source_in": "00:03:54.000",
+      "source_out": "00:04:02.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_006_02"
+        ],
+        "text": "Woh khat kahan hai, Dharam?",
+        "track": "hi"
+      },
+      "video": "scene_06"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [
+        {
+          "object": null,
+          "relation": null,
+          "subject": null,
+          "supported_by": [
+            "scene:scene_05"
+          ],
+          "type": "theme"
+        }
+      ],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "young_adult",
+        "contracts": [
+          "actor_02"
+        ],
+        "facts": [
+          "F03"
+        ],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_05"
+        ],
+        "subtitle_cues": [
+          "sub_hi_005_01"
+        ]
+      },
+      "evidence": [
+        "scene:scene_05",
+        "cue:sub_hi_005_01"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Discovery of envelope. Injection string exists in scene_05 source data — flagged by injection scanner. It is data, not instruction. Does not block. Sub_hi_005_01 inside [03:00-03:08].",
+      "risk_flags": [
+        "INJECTION_DETECTED"
+      ],
+      "role": "tension_discovery",
+      "segment_id": "segment_04",
+      "source_in": "00:03:00.000",
+      "source_out": "00:03:08.000",
+      "subtitle": {
+        "cue_ids": [
+          "sub_hi_005_01"
+        ],
+        "text": "Harmonium ke andar kya rakh diya kisne?",
+        "track": "hi"
+      },
+      "video": "scene_05"
+    },
+    {
+      "audio_mode": "dialogue_only",
+      "claims": [],
+      "confidence": "HIGH",
+      "dependency": {
+        "audience": "young_adult",
+        "contracts": [
+          "actor_01",
+          "actor_02",
+          "actor_03"
+        ],
+        "facts": [
+          "F01",
+          "F02"
+        ],
+        "policies": [
+          "POL-RATING-001",
+          "POL-SPOILER-001",
+          "POL-STORY-001",
+          "POL-ACCESS-001"
+        ],
+        "scene": [
+          "scene_07"
+        ],
+        "subtitle_cues": []
+      },
+      "evidence": [
+        "scene:scene_07",
+        "fact:F01",
+        "fact:F02"
+      ],
+      "framing_tags": [],
+      "music_asset_id": null,
+      "reason": "Silent clip from scene_07 BEFORE F02 reveal window [04:30-04:45] and well before F01 window [04:50-05:10]. Dramatic button. No subtitle required (silent). [04:25-04:30) touching F02 window boundary but half-open — no overlap.",
+      "risk_flags": [],
+      "role": "button",
+      "segment_id": "segment_05",
+      "source_in": "00:04:25.000",
+      "source_out": "00:04:30.000",
+      "subtitle": {
+        "cue_ids": [],
+        "text": "",
+        "track": "hi"
+      },
+      "video": "scene_07"
+    }
+  ],
+  "synthetic": true,
+  "synthetic_notice": "Trailer plan generated from synthetic fixture. Not STAGE content.",
+  "tagline": "",
+  "text_cards": [],
+  "trailer_id": "young_adult_v1",
+  "transitions": [],
+  "validation": null,
+  "voice_over": null
+}

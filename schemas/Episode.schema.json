@@ -1,0 +1,129 @@
+{
+  "$defs": {
+    "Campaign": {
+      "description": "Campaign window and territory — DATA_SPEC.md §4.",
+      "properties": {
+        "territory": {
+          "title": "Territory",
+          "type": "string"
+        },
+        "start": {
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "title": "End",
+          "type": "string"
+        }
+      },
+      "required": [
+        "territory",
+        "start",
+        "end"
+      ],
+      "title": "Campaign",
+      "type": "object"
+    },
+    "TrailerDurationWindow": {
+      "description": "Hard and target duration constraints — DATA_SPEC.md §4.",
+      "properties": {
+        "hard_min_s": {
+          "title": "Hard Min S",
+          "type": "number"
+        },
+        "hard_max_s": {
+          "title": "Hard Max S",
+          "type": "number"
+        },
+        "target_min_s": {
+          "title": "Target Min S",
+          "type": "number"
+        },
+        "target_max_s": {
+          "title": "Target Max S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "hard_min_s",
+        "hard_max_s",
+        "target_min_s",
+        "target_max_s"
+      ],
+      "title": "TrailerDurationWindow",
+      "type": "object"
+    }
+  },
+  "description": "Episode manifest — DATA_SPEC.md §4.\nRequired: synthetic, episode_id, duration, source_language, content_rating,\n          evaluation_date, campaign, trailer_duration_window.",
+  "properties": {
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "synthetic_notice": {
+      "default": "",
+      "title": "Synthetic Notice",
+      "type": "string"
+    },
+    "episode_id": {
+      "title": "Episode Id",
+      "type": "string"
+    },
+    "series_title": {
+      "default": "",
+      "title": "Series Title",
+      "type": "string"
+    },
+    "episode_title": {
+      "default": "",
+      "title": "Episode Title",
+      "type": "string"
+    },
+    "duration": {
+      "title": "Duration",
+      "type": "string"
+    },
+    "source_language": {
+      "title": "Source Language",
+      "type": "string"
+    },
+    "content_rating": {
+      "title": "Content Rating",
+      "type": "string"
+    },
+    "media_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Media Path"
+    },
+    "evaluation_date": {
+      "title": "Evaluation Date",
+      "type": "string"
+    },
+    "campaign": {
+      "$ref": "#/$defs/Campaign"
+    },
+    "trailer_duration_window": {
+      "$ref": "#/$defs/TrailerDurationWindow"
+    }
+  },
+  "required": [
+    "synthetic",
+    "episode_id",
+    "duration",
+    "source_language",
+    "content_rating",
+    "evaluation_date",
+    "campaign",
+    "trailer_duration_window"
+  ],
+  "title": "Episode",
+  "type": "object"
+}

@@ -1,0 +1,282 @@
+{
+  "synthetic": true,
+  "synthetic_notice": "Hand-authored synthetic replay fixture containing DELIBERATE VIOLATIONS for adversarial testing. Represents candidate plans that MUST fail validation. NOT evidence of live model behaviour.",
+  "recorded_for": {
+    "node": "plan_trailers",
+    "fixture_version": "1.0",
+    "episode_id": "ep_synth_001",
+    "scenario": "traps",
+    "input_hash": "sha256:synthetic-fixture-v1-traps",
+    "note": "Trap draft — contains four deliberate violations. Expected validation result: REPAIR_REQUIRED or REJECTED on affected segments."
+  },
+  "trap_summary": {
+    "TRAP_1_SPOILER": {
+      "location": "dialect_region_v1.segment_03",
+      "description": "Uses scene_07 clip [00:04:48-00:04:56] which overlaps F01 reveal window [00:04:50-00:05:10]. Sub_bgc_007_04 at [00:04:50-00:04:54] is inside the window. Spoiler level MAJOR. POL-SPOILER-001 HARD FAIL.",
+      "expected_validator": "Spoiler",
+      "expected_result": "FAIL"
+    },
+    "TRAP_2_RIGHTS": {
+      "location": "family_v1.segment_04",
+      "description": "Uses music_07 (C-MUS-07) with audio_mode dialogue_and_music. C-MUS-07 has promotional_use=false. POL-DURATION (Rights) HARD FAIL.",
+      "expected_validator": "Rights",
+      "expected_result": "FAIL"
+    },
+    "TRAP_3_STORY_TRUTH": {
+      "location": "family_v1.segment_04",
+      "description": "Contains a marketing claim asserting char_randhir and char_sunita have relation=spouse. story_facts.json documents their public relation as uncle_niece. Spouse is in forbidden_claim_patterns. POL-STORY-001 HARD FAIL.",
+      "expected_validator": "StoryTruth",
+      "expected_result": "FAIL"
+    },
+    "TRAP_4_CLICKBAIT": {
+      "location": "young_adult_v1.segment_03",
+      "description": "Contains a clickbait claim asserting the episode genre is revenge_thriller. story_facts.json permitted_genres = [family_drama, mystery]. POL-STORY-001 HARD FAIL.",
+      "expected_validator": "StoryTruth",
+      "expected_result": "FAIL"
+    }
+  },
+  "response": {
+    "plans": {
+      "family_v1": {
+        "trailer_id": "family_v1",
+        "audience_id": "family",
+        "status": "REPAIR_REQUIRED",
+        "total_duration_s": 38,
+        "segments": [
+          {
+            "segment_id": "segment_01",
+            "scene_id": "scene_02",
+            "source_in": "00:00:50.000",
+            "source_out": "00:01:00.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_002_03"], "text": "Tau ne dekha tha tum gire the hastte-hastte!"},
+            "role": "hook_humour",
+            "reason": "Same as clean baseline — valid segment.",
+            "evidence": ["scene:scene_02", "cue:sub_hi_002_03"],
+            "risk_flags": [],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_02",
+            "scene_id": "scene_01",
+            "source_in": "00:00:20.000",
+            "source_out": "00:00:30.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_and_music",
+            "music_asset_id": "music_03",
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_001_02"], "text": "Bhaiya, ek khat tha koi..."},
+            "role": "warmth",
+            "reason": "Same as clean baseline — valid segment.",
+            "evidence": ["scene:scene_01", "cue:sub_hi_001_02", "contract:music_03"],
+            "risk_flags": [],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_03",
+            "scene_id": "scene_03",
+            "source_in": "00:01:40.000",
+            "source_out": "00:01:50.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_003_04"], "text": "Chachi, kuch toh chhupa hai is ghar mein."},
+            "role": "mystery_hook",
+            "reason": "Same as clean baseline — valid segment.",
+            "evidence": ["scene:scene_03", "cue:sub_hi_003_04"],
+            "risk_flags": [],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_04",
+            "scene_id": "scene_04",
+            "source_in": "00:02:12.000",
+            "source_out": "00:02:20.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_and_music",
+            "music_asset_id": "music_07",
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_004_01"], "text": "Chitthi kahan hai, Bhaiya?"},
+            "role": "stakes_conflict",
+            "reason": "TRAP: music_07 selected for promotional use. C-MUS-07 has promotional_use=false. Expected: Rights FAIL. Additionally contains false relationship claim (see claims). Expected: StoryTruth FAIL.",
+            "evidence": ["scene:scene_04", "cue:sub_hi_004_01", "contract:music_07"],
+            "risk_flags": ["RIGHTS_VIOLATION_EXPECTED", "STORY_TRUTH_VIOLATION_EXPECTED"],
+            "claims": [
+              {
+                "type": "relationship",
+                "subject": "char_randhir",
+                "object": "char_sunita",
+                "relation": "spouse",
+                "supported_by": ["scene:scene_04"],
+                "_trap_note": "FALSE CLAIM: story_facts.json documents char_randhir–char_sunita as uncle_niece (public). spouse is in forbidden_claim_patterns. StoryTruth validator must FAIL this."
+              },
+              {
+                "type": "theme",
+                "value": "family_secret",
+                "supported_by": ["scene:scene_04"]
+              }
+            ]
+          }
+        ]
+      },
+      "young_adult_v1": {
+        "trailer_id": "young_adult_v1",
+        "audience_id": "young_adult",
+        "status": "REPAIR_REQUIRED",
+        "total_duration_s": 41,
+        "segments": [
+          {
+            "segment_id": "segment_01",
+            "scene_id": "scene_02",
+            "source_in": "00:01:00.000",
+            "source_out": "00:01:10.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_002_05"], "text": "Yeh sab chhodo, chai peeyo."},
+            "role": "hook_humour",
+            "reason": "Same as clean baseline — valid segment.",
+            "evidence": ["scene:scene_02", "cue:sub_hi_002_05"],
+            "risk_flags": [],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_02",
+            "scene_id": "scene_04",
+            "source_in": "00:02:44.000",
+            "source_out": "00:02:54.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_004_05"], "text": "Main sach jaanna chahti hoon, Bhaiya!"},
+            "role": "conflict_identity",
+            "reason": "Same as clean baseline — valid segment.",
+            "evidence": ["scene:scene_04", "cue:sub_hi_004_05"],
+            "risk_flags": [],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_03",
+            "scene_id": "scene_06",
+            "source_in": "00:03:54.000",
+            "source_out": "00:04:02.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_and_music",
+            "music_asset_id": "music_09",
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_006_02"], "text": "Woh khat kahan hai, Dharam?"},
+            "role": "escalation",
+            "reason": "TRAP: clickbait claim asserts genre revenge_thriller. story_facts.json permitted_genres=[family_drama, mystery]. Expected: StoryTruth FAIL.",
+            "evidence": ["scene:scene_06", "cue:sub_hi_006_02", "contract:music_09"],
+            "risk_flags": ["STORY_TRUTH_VIOLATION_EXPECTED"],
+            "claims": [
+              {
+                "type": "genre",
+                "value": "revenge_thriller",
+                "supported_by": ["scene:scene_06"],
+                "_trap_note": "CLICKBAIT CLAIM: episode is not a revenge thriller. forbidden_claim_patterns and permitted_genres=[family_drama,mystery] both contradict this. StoryTruth validator must FAIL."
+              }
+            ]
+          },
+          {
+            "segment_id": "segment_04",
+            "scene_id": "scene_05",
+            "source_in": "00:03:00.000",
+            "source_out": "00:03:08.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": ["sub_hi_005_01"], "text": "Harmonium ke andar kya rakh diya kisne?"},
+            "role": "tension_discovery",
+            "reason": "Same as clean baseline — valid segment. Injection flag present in scene source data.",
+            "evidence": ["scene:scene_05", "cue:sub_hi_005_01"],
+            "risk_flags": ["INJECTION_DETECTED"],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_05",
+            "scene_id": "scene_07",
+            "source_in": "00:04:25.000",
+            "source_out": "00:04:30.000",
+            "duration_s": 5,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "hi", "cue_ids": [], "text": ""},
+            "role": "button",
+            "reason": "Same as clean baseline — valid silent clip.",
+            "evidence": ["scene:scene_07"],
+            "risk_flags": [],
+            "claims": []
+          }
+        ]
+      },
+      "dialect_region_v1": {
+        "trailer_id": "dialect_region_v1",
+        "audience_id": "dialect_region",
+        "status": "REPAIR_REQUIRED",
+        "total_duration_s": 38,
+        "segments": [
+          {
+            "segment_id": "segment_01",
+            "scene_id": "scene_01",
+            "source_in": "00:00:08.000",
+            "source_out": "00:00:16.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "bgc", "cue_ids": ["sub_bgc_001_01"], "text": "[bgc placeholder] Aa ja, chai pee le, thandi ho rahi se."},
+            "role": "familiar_voice",
+            "reason": "Same as clean baseline — valid segment.",
+            "evidence": ["scene:scene_01", "cue:sub_bgc_001_01"],
+            "risk_flags": ["NATIVE_REVIEW_PENDING"],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_02",
+            "scene_id": "scene_03",
+            "source_in": "00:01:30.000",
+            "source_out": "00:01:40.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "bgc", "cue_ids": ["sub_bgc_003_02"], "text": "[bgc placeholder] Kaun sa khat, Chachi?"},
+            "role": "mystery_hook",
+            "reason": "Same as clean baseline — valid segment.",
+            "evidence": ["scene:scene_03", "cue:sub_bgc_003_02"],
+            "risk_flags": ["NATIVE_REVIEW_PENDING"],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_03",
+            "scene_id": "scene_07",
+            "source_in": "00:04:48.000",
+            "source_out": "00:04:56.000",
+            "duration_s": 8,
+            "audio_mode": "dialogue_only",
+            "music_asset_id": null,
+            "subtitle": {"track": "bgc", "cue_ids": ["sub_bgc_007_04"], "text": "[bgc placeholder] Haan... sach tha jo usme likha tha."},
+            "role": "conflict",
+            "reason": "TRAP: this clip [04:48-04:56] overlaps F01 reveal window [04:50-05:10]. Sub_bgc_007_04 at [04:50-04:54] is INSIDE the F01 window. Spoiler level MAJOR. POL-SPOILER-001 HARD FAIL. Also: scene_07 highest historical CTR (0.90) — historical CTR cannot override this. Expected: Spoiler FAIL.",
+            "evidence": ["scene:scene_07", "cue:sub_bgc_007_04", "fact:F01"],
+            "risk_flags": ["SPOILER_MAJOR_VIOLATION_EXPECTED", "NATIVE_REVIEW_PENDING"],
+            "claims": []
+          },
+          {
+            "segment_id": "segment_04",
+            "scene_id": "scene_08",
+            "source_in": "00:05:20.000",
+            "source_out": "00:05:30.000",
+            "duration_s": 10,
+            "audio_mode": "dialogue_and_music",
+            "music_asset_id": "music_03",
+            "subtitle": {"track": "bgc", "cue_ids": ["sub_bgc_008_02"], "text": "[bgc placeholder] Bhai, main maafi maangti hoon."},
+            "role": "heart",
+            "reason": "Same as clean baseline — valid segment (music_03 valid before change event).",
+            "evidence": ["scene:scene_08", "cue:sub_bgc_008_02", "contract:music_03"],
+            "risk_flags": ["NATIVE_REVIEW_PENDING"],
+            "claims": []
+          }
+        ]
+      }
+    }
+  }
+}

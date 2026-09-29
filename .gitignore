@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and virtual environments
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables and secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary runtime output runs (generated artifacts)
+runs/
